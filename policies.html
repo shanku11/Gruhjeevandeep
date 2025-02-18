@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policies</title>
+    <link rel="stylesheet" href="policy.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="GJD_logo.png" alt="Logo" style="height: 30px;" onclick="location.reload();">GRUHJEEVANDEEP - Policies</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home" style="color: #2ecc71;"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html"><i class="fas fa-book" style="color: #3498db;"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcare.html"><i class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agri.html"><i class="fas fa-tractor" style="color: green;"></i> Agriculture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,ml,ta,hi,te,kn' }, 
+                'google_translate_element'
+            );
+        }
+        function changeLanguage() {
+            var lang = document.getElementById("googleLang").value;
+            var selectElem = document.querySelector(".goog-te-combo");
+            if (selectElem) {
+                selectElem.value = lang;
+                selectElem.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_element {
+            display: none;
+        }
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .goog-te-spinner-pos,
+        iframe.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style><br><br>
+    <div class="header">
+        <h1>Government Schemes - Detailed Explanation</h1>
+        <p>Explore various government schemes, their benefits, and how to apply for them</p>
+    </div>
+    <marquee id="marquee" behavior="scroll" direction="left">
+        <h3 style="color: #e74c3c;">GRUHJEEVANDEEP : A non-profit organization of holistic guide for better education, agriculture, medical, and government policies.</h3>
+    </marquee>
+    <style>
+        .container {
+              max-width: 600px;
+              margin: auto;
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          select, input, button {
+              width: 100%;
+              padding: 10px;
+              margin: 10px 0;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+          }
+          .result {
+              margin-top: 20px;
+              padding: 10px;
+              background: #e0f7fa;
+              border-radius: 5px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h2>Telangana Govt Websites</h2>
+          <input type="text" id="search" placeholder="Search website...">
+          <button onclick="searchWebsite()">Search</button>
+          <h4>select here for the website you want to search</h4>
+          <select id="websiteList" onchange="displayWebsite()">
+            <option value="">Select a website</option>
+            <option value="https://rajivaarogyasri.telangana.gov.in">Rajiv Aarogyasri Health Care Trust</option>
+            <option value="https://eagrimarket.telangana.gov.in">Agriculture and Co-operation Department, Telangana</option>
+            <option value="https://ahddf.telangana.gov.in">Animal Husbandry, Dairy Development & Fisheries</option>
+            <option value="https://www.aasara.telangana.gov.in">Asara Pensions</option>
+            <option value="https://tsobmms.cgg.gov.in">Backward Classes Welfare</option>
+            <option value="https://bathukamma.telangana.gov.in">Bathukamma</option>
+            <option value="https://www.nrega.telangana.gov.in">Benefit Disbursement Portal</option>
+            <option value="https://ubdmis.telangana.gov.in">Birth & Death Registration</option>
+            <option value="https://tsbie.cgg.gov.in">Board of Intermediate Education Telangana</option>
+            <option value="https://ceotelangana.nic.in">Chief Electoral Officer Telangana</option>
+            <option value="https://cm.telangana.gov.in">Chief Minister's Office</option>
+            <option value="https://ccla.telangana.gov.in">Commissioner & Director of Land Administration</option>
+            <option value="https://www.tgct.gov.in/tgportal">Commercial Taxes Department</option>
+            <option value="https://emunicipal.telangana.gov.in">Commissioner & Director of Municipal Administration</option>
+            <option value="https://dte.telangana.gov.in">Department of Technical Education</option>
+            <option value="https://treasury.telangana.gov.in">Directorate of Treasuries and Accounts</option>
+            <option value="https://forests.telangana.gov.in">Telangana Forest Department</option>
+            <option value="https://tsredco.telangana.gov.in">Telangana New & Renewable Energy Development Corporation Ltd</option>
+            <option value="https://tourism.telangana.gov.in">Telangana Tourism Department</option>
+          </select>
+          <button onclick="displayWebsite()">Display Website</button>
+          <div class="result" id="displayArea">Website details will appear here...</div>
+      </div>
+  
+      <script>
+          function displayWebsite() {
+              let websiteList = document.getElementById("websiteList");
+              let displayArea = document.getElementById("displayArea");
+              let selectedValue = websiteList.value;
+              
+              if (selectedValue) {
+                  displayArea.innerHTML = `<a href="${selectedValue}" target="_blank">Visit ${websiteList.options[websiteList.selectedIndex].text}</a>`;
+              } else {
+                  displayArea.innerHTML = "Website details will appear here...";
+              }
+          }
+  
+          function searchWebsite() {
+              let searchInput = document.getElementById("search").value.toLowerCase();
+              let options = document.getElementById("websiteList").options;
+              let found = false;
+              let displayArea = document.getElementById("displayArea");
+              
+              for (let i = 1; i < options.length; i++) {
+                  let text = options[i].text.toLowerCase();
+                  if (text.includes(searchInput)) {
+                      options[i].selected = true;
+                      displayArea.innerHTML = `<a href="${options[i].value}" target="_blank">Visit ${options[i].text}</a>`;
+                      found = true;
+                      break;
+                  }
+              }
+              
+              if (!found) {
+                  displayArea.innerHTML = "No matching website found.";
+              }
+          }
+      </script>
+    <div class="main-container">
+
+        <!-- Scheme 1 Container -->
+        <div class="scheme-section">
+            <div class="section-header">
+                <h2>Pradhan Mantri Jan Dhan Yojana (PMJDY)</h2>
+            </div><br>
+            <img src="https://www.india.gov.in/sites/upload_files/npi/files/spotlights/jan-dhan-yojna-inner-new.jpg" width="100%" heigth="60%">
+            <div class="scheme-container">
+                <p class="section-title">Overview:</p>
+                <p class="content">
+                    The Pradhan Mantri Jan Dhan Yojana is a financial inclusion scheme launched by the Government of India to ensure access to various financial services like banking, savings & deposit accounts, credit, insurance, and pension in an affordable manner.
+                </p>
+            </div>
+           
+            <div class="scheme-container">
+                <p class="section-title">Benefits:</p>
+                <ul class="content">
+                    <li>Access to a bank account, debit card, and online banking.</li>
+                    <li>Overdraft facility after 6 months of account operation.</li>
+                    <li>Access to insurance and pension schemes.</li>
+                    <li>No minimum balance requirement.</li>
+                </ul>
+            </div>
+
+            <div class="scheme-container">
+                <p class="section-title">How to Apply:</p>
+                <ol class="content">
+                    <li>Visit your nearest bank branch or post office.</li>
+                    <li>Provide a valid identity proof and address proof.</li>
+                    <li>Fill out the application form and submit it along with necessary documents.</li>
+                    <li>Your account will be activated within a few days.</li>
+                </ol>
+            </div>
+
+            <div class="scheme-container">
+                <p class="section-title">Implementation Steps:</p>
+                <ul class="content">
+                    <li>Ensure financial literacy to understand the scheme's benefits.</li>
+                    <li>Promote the scheme through outreach programs.</li>
+                    <li>Provide access to banking facilities in rural areas.</li>
+                </ul>
+            </div>
+
+            <a href="https://www.pmjdy.gov.in/" class="button">Apply Now</a>
+        </div>
+
+        <!-- Scheme 2 Container -->
+        <div class="scheme-section">
+            <div class="section-header">
+                <h2> Atal Pension Yojana (APY)</h2>
+            </div>
+            <img src="https://www.india.gov.in/sites/upload_files/npi/files/spotlights/atal-pension-yojna-inner.jpg" width="100%" heigth="60%">
+            <div class="scheme-container">
+                <p class="section-title">Overview:</p>
+                <p class="content">
+                    The Atal Pension Yojana is a pension scheme launched by the Government of India to provide a fixed pension to individuals working in the unorganized sector.
+                </p>
+            </div>
+
+            <div class="scheme-container">
+                <p class="section-title">Benefits:</p>
+                <ul class="content">
+                    <li>Guaranteed pension from the age of 60.</li>
+                    <li>Flexible monthly contributions based on chosen pension amount.</li>
+                    <li>Government contribution for eligible individuals.</li>
+                    <li>Tax benefits on contributions made to the scheme.</li>
+                </ul>
+            </div>
+
+            <div class="scheme-container">
+                <p class="section-title">How to Apply:</p>
+                <ol class="content">
+                    <li>Visit the nearest bank or post office.</li>
+                    <li>Fill out the APY application form.</li>
+                    <li>Provide necessary documents (Aadhar, Bank details, etc.).</li>
+                    <li>Choose the pension amount and make monthly contributions.</li>
+                </ol>
+            </div>
+
+            <div class="scheme-container">
+                <p class="section-title">Implementation Steps:</p>
+                <ul class="content">
+                    <li>Promote the scheme among low-income workers.</li>
+                    <li>Ensure that applications are processed promptly.</li>
+                    <li>Monitor the pension distribution for eligible individuals.</li>
+                </ul>
+            </div>
+
+            <a href="https://www.india.gov.in/spotlight/atal-pension-yojana" class="button">Apply Now</a>
+        </div>
+  <!-- CM Relief Fund Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>CM Relief Fund</h2>
+    </div><br>
+    <img src="https://tnpds.org.in/wp-content/uploads/2023/04/How-to-apply-for-CM-Relief-Fund.jpg" width="100%" heigth="60%">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The CM Relief Fund provides financial assistance to individuals in emergency situations such as medical treatment, natural disasters, and other crises.
+        </p>
+    </div>
+    <div class="scheme-container">
+        <p class="section-title">How to Apply:</p>
+        <ol class="content">
+            <li>Visit the official government website.</li>
+            <li>Fill in the application form with required details.</li>
+            <li>Attach necessary supporting documents.</li>
+            <li>Submit the application for verification.</li>
+        </ol>
+    </div>
+    <a href="https://tsobmms.cgg.gov.in/" class="button" target="_blank">Apply Now</a>
+</div>
+
+<!-- Cheyutha Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>Cheyutha Scheme</h2>
+    </div><br>
+    <img src="https://www.freshersnow.com/wp-content/uploads/2020/07/YSR-Cheyutha-Scheme.png" width="100%" height="60%">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The Cheyutha scheme is designed to provide financial support to women in need, helping them achieve financial stability and empowerment.
+        </p>
+    </div>
+    <div class="scheme-container">
+        <p class="section-title">Benefits:</p>
+        <ul class="content">
+            <li>Financial assistance for women's welfare.</li>
+            <li>Support for self-employment initiatives.</li>
+            <li>Quick processing and easy access to funds.</li>
+        </ul>
+    </div>
+    <a href="https://tsobmms.cgg.gov.in/" class="button" target="_blank">Apply Now</a>
+</div>
+
+<!-- Kalyanalakshmi Scheme Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>Kalyanalakshmi Scheme</h2>
+    </div><br>
+    <img src="https://telanganaweb.com/wp-content/uploads/2020/05/epass-homepage-2.png" width="100%" height="60%">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The Kalyanalakshmi scheme provides financial assistance to economically weaker families for the marriage of their daughters, reducing the financial burden on them.
+        </p>
+    </div>
+    <div class="scheme-container">
+        <p class="section-title">Implementation Steps:</p>
+        <ul class="content">
+            <li>Ensure smooth registration of beneficiaries.</li>
+            <li>Verify documents and approve eligible applications.</li>
+            <li>Direct transfer of financial aid to beneficiary accounts.</li>
+        </ul>
+    </div>
+    <a href="https://tsobmms.cgg.gov.in/" class="button" target="_blank">Apply Now</a>
+</div>
+
+
+<!-- Rythu Bandhu Scheme Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>Rythu Bandhu Scheme</h2>
+    </div><br>
+  <img src="https://launchpadeducation.in/wp-content/uploads/2023/11/blog-pictures-12.jpg" width="100%" height="60%">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The Rythu Bandhu Scheme is a farmer investment support scheme initiated by the Telangana government. It provides direct financial assistance to farmers for investment in agriculture, ensuring that they have the resources to grow crops effectively.
+        </p>
+    </div>
+
+    <div class="scheme-container">
+        <p class="section-title">Benefits:</p>
+        <ul class="content">
+            <li>Direct investment support for farmers to purchase seeds, fertilizers, and other farming inputs.</li>
+            <li>Enhances agricultural productivity and ensures timely sowing of crops.</li>
+            <li>Improved income levels for farmers.</li>
+            <li>Boosts the agriculture sector and promotes sustainable farming practices.</li>
+        </ul>
+    </div>
+
+    <div class="scheme-container">
+        <p class="section-title">How to Apply:</p>
+        <ol class="content">
+            <li>Visit the local agriculture office or apply through the Telangana government portal.</li>
+            <li>Provide details of your land and farming activities.</li>
+            <li>Submit necessary documents, including land ownership and identity proof.</li>
+            <li>Funds will be transferred directly to your bank account after verification.</li>
+        </ol>
+    </div>
+
+    <div class="scheme-container">
+        <p class="section-title">Implementation Steps:</p>
+        <ul class="content">
+            <li>Register eligible farmers and ensure their bank account details are updated.</li>
+            <li>Distribute financial assistance on time during the sowing season.</li>
+            <li>Monitor the progress and effectiveness of the scheme.</li>
+        </ul>
+    </div>
+
+    <a href="https://rythubandhu.telangana.gov.in/" class="button" target="_blank">Apply Now</a>
+</div>
+
+<!-- PM-KISAN Scheme Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>PM-KISAN Scheme</h2>
+    </div><br>
+    <img src="https://theunitedindian.com/images/pm-kisan.jpg" width="100%" height="100%" alt="Ayushman Bharat">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The PM-KISAN scheme provides financial support to farmers by offering direct income assistance to improve agricultural productivity and sustainability.
+        </p>
+    </div>
+    <div class="scheme-container">
+        <p class="section-title">Benefits:</p>
+        <ul class="content">
+            <li>Financial aid of ₹6,000 per year to eligible farmers.</li>
+            <li>Funds directly transferred to beneficiaries' bank accounts.</li>
+            <li>Boosts rural economy and agricultural growth.</li>
+        </ul>
+    </div>
+    <a href="https://pmkisan.gov.in/" class="button" target="_blank">Apply Now</a>
+</div>
+
+<!-- Ayushman Bharat Scheme Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>Ayushman Bharat Scheme</h2>
+    </div><br>
+<img src="https://www.okbima.com/assets/uploads/blog/2018977fba45e5fa1bb958ed777f29db.webp" width="100%" height="100%" alt="Ayushman Bharat">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The Ayushman Bharat scheme provides health insurance coverage for economically weaker sections, ensuring free medical treatment for serious illnesses.
+        </p>
+        <div class="scheme-container">
+            <p class="section-title">Benefits:</p>
+            <ul class="content">
+                <li>Health coverage of up to ₹5 lakh per family per year.</li>
+                <li>Cashless treatment at empaneled hospitals.</li>
+                <li>Coverage for pre-existing diseases.</li>
+            </ul>
+        </div>
+        <a href="https://pmjay.gov.in/" class="button" target="_blank">Apply Now</a>
+    </div>
+</div>
+
+<!-- Pradhan Mantri Awas Yojana Section -->
+<div class="scheme-section">
+    <div class="section-header">
+        <h2>Pradhan Mantri Awas Yojana</h2>
+    </div><br>
+    <img src="https://www.raceias.com/public/storage/current_affairs/cZwOdrYnII2Kx93CYRBHRid5TECY7DD2lycVFp5C.jpg" width="100%" height="60%">
+    <div class="scheme-container">
+        <p class="section-title">Overview:</p>
+        <p class="content">
+            The Pradhan Mantri Awas Yojana aims to provide affordable housing for all, ensuring proper living conditions for urban and rural families in need.
+        </p>
+        <div class="scheme-container">
+            <p class="section-title">Benefits:</p>
+            <ul class="content">
+                <li>Subsidized home loans for first-time homebuyers.</li>
+                <li>Affordable housing for economically weaker sections.</li>
+                <li>Encourages urban and rural housing development.</li>
+            </ul>
+        </div>
+        <a href="https://pmaymis.gov.in/" class="button" target="_blank">Apply Now</a>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 GRUH JEEVAN DEEP | Empowering Through Knowledge
+    </footer>
+    </body>
+</html>

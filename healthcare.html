@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Directory</title>
+    <link rel="stylesheet" href="health_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="GJD_logo.png" alt="Logo" style="height: 30px;" onclick="location.reload();">GRUHJEEVANDEEP- Healthcare</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home" style="color: #2ecc71;"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html"><i class="fas fa-book" style="color: #3498db;"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcare.html"><i class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agri.html"><i class="fas fa-tractor" style="color: green;"></i> Agriculture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,ml,ta,hi,te,kn' }, 
+                'google_translate_element'
+            );
+        }
+
+        function changeLanguage() {
+            var lang = document.getElementById("googleLang").value;
+            var selectElem = document.querySelector(".goog-te-combo");
+            
+            if (selectElem) {
+                selectElem.value = lang;
+                selectElem.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_element {
+            display: none;
+        }
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .goog-te-spinner-pos,
+        iframe.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style>
+    <!-- Image Container with Quotes -->
+    <div class="image-container">
+        <img src="https://miro.medium.com/max/2560/1*ylvdHtjWHGNndwmrVqyk-g.jpeg" alt="Healthcare Image" style="opacity: 0.9">
+        <div class="quote-container">
+            <div class="quote-box" id="quote-box"></div>
+        </div>
+    </div>
+
+    
+        <h1>Medical Management in Daily Life</h1>
+    <nav>
+        <a href="#Arogyasri-hospitals-Telangana">Arogyasri Hospitals Telangana</a>
+        <a href="#Ayushman-bharath">Ayushman Bharat</a>
+        <a href="#Free-Services-hospitals in Telangana">Service Hospitals</a>
+    </nav>
+    <br>
+    <style>.marquee {
+        width: 100%;
+        background: #222;
+        color: rgb(255, 7, 7);
+        font-size: 18px;
+        padding: 10px 0;
+        text-size-adjust: 24px;
+        font-weight: bold;
+    }
+    .marquee-text{
+        color: #e74c3c;
+    }
+</style>
+<marquee id="marquee" behavior="scroll" direction="left">
+    <h3 style="color: #e74c3c;">GRUHJEEVANDEEP : A non-profit organization of holistic guide for better education, agriculture, medical, and government policies.</h3>
+</marquee>
+
+    <br>
+    <br>
+
+    <div class="hospital-info">
+    <div class="container" id="Arogyasri-hospitals-Telangana">
+    <h1>Arogyasri hospitals Telangana</h1>
+    <p style="text-align: center; color: brown;">Select a district to view hospitals:</p>
+    
+
+    <!-- Dropdown for state selection -->
+    <select id="district-select">
+        <option value="">-- Select Districts --</option>
+        <option value="hyderabad">Hyderabad</option>
+        <option value="warangal">Warangal</option>
+        <option value="karimnagar">Karimnagar</option>
+        <option value="medak">Medak</option>
+        <option value="mahbubnagar">Mahbubnagar</option>
+        <option value="khammam">khammam</option>
+        <option value="secunderabad">Secunderabad</option>
+        <option value="nalgonda">Nalgonda</option>
+        <option value="nizamabad">Nizamabad</option>
+        <option value="adilabad">Adilabad</option>
+        <!-- Add more states here -->
+    </select>
+   
+
+    <!-- Container to display hospitals -->
+    <div id="hospital-list"></div>
+</div>
+    <script src="script.js">
+    </script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="hospital-info">
+    <div class="container" id="Ayushman-bharath">
+     <h1>Ayushman bharath</h1>
+     <p style="text-align: center; color: brown;"> select a state to view hospitals:</p>
+     <select id="state-select" ng-model="selectedState" ng-change="showHospitals(selectedState)">
+        <option value="">-- Select State --</option>
+        <option value="andhraPradesh">Andhra Pradesh</option>
+        <option value="arunachalPradesh">Arunachal Pradesh</option>
+        <option value="assam">Assam</option>
+        <option value="bihar">Bihar</option>
+        <option value="chhattisgarh">Chhattisgarh</option>
+        <option value="goa">Goa</option>
+        <option value="gujarat">Gujarat</option>
+        <option value="haryana">Haryana</option>
+        <option value="himachalPradesh">Himachal Pradesh</option>
+        <option value="jharkhand">Jharkhand</option>
+        <option value="karnataka">Karnataka</option>
+        <option value="kerala">Kerala</option>
+        <option value="madhyaPradesh">Madhya Pradesh</option>
+        <option value="maharashtra">Maharashtra</option>
+        <option value="manipur">Manipur</option>
+        <option value="meghalaya">Meghalaya</option>
+        <option value="mizoram">Mizoram</option>
+        <option value="nagaland">Nagaland</option>
+        <option value="odisha">Odisha</option>
+        <option value="punjab">Punjab</option>
+        <option value="rajasthan">Rajasthan</option>
+        <option value="sikkim">Sikkim</option>
+        <option value="tamilNadu">Tamil Nadu</option>
+        <option value="telangana">Telangana</option>
+        <option value="tripura">Tripura</option>
+        <option value="uttarPradesh">Uttar Pradesh</option>
+        <option value="uttarakhand">Uttarakhand</option>
+        <option value="westBengal">West Bengal</option>
+        <option value="andamanNicobar">Andaman and Nicobar Islands</option>
+        <option value="chandigarh">Chandigarh</option>
+        <option value="dadraNagarHaveli">Dadra and Nagar Haveli and Daman and Diu</option>
+        <option value="delhi">Delhi</option>
+        <option value="jammuKashmir">Jammu and Kashmir</option>
+        <option value="ladakh">Ladakh</option>
+        <option value="lakshadweep">Lakshadweep</option>
+        <option value="puducherry">Puducherry</option>
+    </select>
+    <div id="hospital-list"></div>
+    <selection class="Ayushman-barath">
+        <script src="outer.js"></script>
+        <p>
+            To download the Ayushman card hospital list in
+    Kurnool PDF, visit the official website <a target="_blank" href="https://hospitals.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsNew">here</a>
+            , fill the captcha and click on <strong>'Search'</strong>
+            . Click on the download icon and save the
+    PDF. You can also download PDF of all empanelled PMJAY</p>
+    </selection>
+    </div>
+    </div>
+ <br> 
+<br>
+
+<br>
+<br>
+<div class="container" id="Free-Services-hospitals in Telangana">
+    <section class="hospital-info">
+        <h1>Free Services hospitals in Telangana</h1>
+        <div class="hospital-info">
+            
+            <h2>CMR Hospital</h2>
+            <img src="http://www.cmrhospital.com/images/desktop_banner.jpg" width="80%" height="60%" style="display: block; margin: auto;">
+            
+            <p>
+                <strong>CMR Hospital</strong> is a premier multi-specialty healthcare institution in Telangana, 
+                <strong>offering world-class medical care.</strong> It provides <strong>free medical services</strong> under various government health schemes, ensuring that quality healthcare reaches everyone, especially underprivileged sections.
+            </p>
+        
+            <h3>Health & Wellness Articles</h3>
+            <ul style="text-align: left; display: inline-block;">
+                <li><strong>Foods to Beat the Heat</strong><br>As the temperature swings between 40-50 degrees, it is important to stay hydrated and focus on your diet. This summer, include these food items...</li>
+                <li><strong>Managing Your Stress</strong><br>Nearly 80% of the Indian population suffer from stress-related issues. Be it work, financial stress, or family issues, stress is common...</li>
+                <li><strong>Health Tests for Fathers</strong><br>As people age, they become more prone to health ailments. Minor symptoms, when ignored, can lead to severe diseases...</li>
+            </ul>
+        
+            <h3>🏩 Services Offered</h3>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Emergency & Trauma Care (24/7)</li>
+                <li>Cardiology & Heart Surgery</li>
+                <li>Neurology & Neurosurgery</li>
+                <li>Orthopedic & Joint Replacement</li>
+                <li>Oncology & Cancer Treatment</li>
+                <li>Advanced Diagnostics & Imaging</li>
+                <li>Maternity & Child Care</li>
+                <li>Free Health Check-ups & Vaccination Camps</li>
+            </ul>
+        
+            <h3>🔹 Free Services Under Government Schemes</h3>
+            <ul style="text-align: left; display: inline-block;">
+                <li>OPD Consultations & Follow-ups</li>
+                <li>Surgeries & Emergency Procedures</li>
+                <li>Dialysis & Cancer Treatment</li>
+                <li>Diagnostic Tests & Imaging</li>
+                <li>Blood Donation & Organ Transplant Support</li>
+            </ul>
+        
+            <p><strong>Location:</strong> Hyderabad, Telangana</p>
+            <p><strong>Contact:</strong> +91 9876543210 | Email: <a href="mailto:info@cmrhospital.com">info@cmrhospital.com</a></p>
+        
+            <a href="https://www.cmrhospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+        <div class="hospital-info">
+            <h2>Gandhi Hospital</h2>
+            <img src="https://www.gandhihospital.telangana.gov.in/resource/images/gh_logo.jpg" width="80%" height="60%">
+            <p><strong>Location:</strong> Secunderabad, Telangana</p>
+            <p>Gandhi Hospital is a leading government hospital providing free medical services, specializing in trauma care, cardiology, and general medicine.</p>
+            <a href="https://www.gandhihospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        
+        </div>
+        
+        <div class="hospital-info">
+            <h2>Osmania General Hospital</h2>
+            <img src="https://i.pinimg.com/736x/3c/4d/25/3c4d256d1f13ff3f4c0ac1652e274557.jpg" width="80%" height="60%">
+            <p><strong>Location:</strong> Hyderabad, Telangana</p>
+            <p>Osmania General Hospital provides free healthcare services under government schemes, with specialties in surgery, diagnostics, and emergency care.</p>
+            <a href="https://www.osmaniahospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+        
+        <div class="hospital-info">
+            <h2>Nizam's Institute of Medical Sciences</h2>
+            <img src="https://tse3.mm.bing.net/th?id=OIP.tBybR8A9k6HnWpFrFQEO3QHaCf&pid=Api&P=0&h=180" width="80%" height="60%">
+            <p><strong>Location:</strong> Hyderabad, Telangana</p>
+            <p>NIMS provides free and subsidized healthcare services, specializing in cardiology, neurology, and nephrology.</p>
+            <a href="https://www.nims.edu.in" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+        
+        <div class="hospital-info">
+            <h2>Government Chest Hospital</h2>
+            <img src="https://www.siasat.com/wp-content/uploads/2021/04/Chest-Hospital.jpg" width="80%" height="60%">
+            <p><strong>Location:</strong> Hyderabad, Telangana</p>
+            <p>Government Chest Hospital specializes in pulmonary medicine and provides free treatments under government health schemes.</p>
+            <a href="https://www.chesthospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+        
+        <div class="hospital-info">
+            <h2>Fever Hospital</h2>
+            <img src="https://en-media.thebetterindia.com/uploads/2022/01/fever-hospital-nallakunta-hyderabad-hospitals-7ysf0-1641825158.jpg" width="80%" height="60%">
+            <p><strong>Location:</strong> Hyderabad, Telangana</p>
+            <p>Fever Hospital provides specialized treatment for infectious diseases and emergency healthcare services at no cost.</p>
+            <a href="https://www.feverhospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+        
+        <div class="hospital-info">
+            <h2>MGM Hospital</h2>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.VG3SfJygrIhRoG7laloh8wHaEK&pid=Api&P=0&h=180" width="80%" height="60%">
+            <p><strong>Location:</strong> Warangal, Telangana</p>
+            <p>MGM Hospital offers free and affordable healthcare services, focusing on surgery, pediatrics, and gynecology.</p>
+            <a href="https://www.mgmhospital.com" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Visit Official Website</a>
+        </div>
+    </section>
+</div>
+<!-- Footer -->
+<footer>
+    &copy; 2025 GRUH JEEVAN DEEP | Empowering Through Knowledge
+</footer>
+</body>
+</html>
