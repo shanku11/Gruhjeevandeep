@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farming Organizations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="agri_style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GRUHJEEVANDEEP - Agriculture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <br>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home" style="color: #2ecc71;"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html"><i class="fas fa-book" style="color: #3498db;"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcare.html"><i class="fas fa-stethoscope" style="color: #e74c3c;"></i>HealthCare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agri.html"><i class="fas fa-tractor" style="color: green;"></i>Agriculture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i>Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,ml,ta,hi,te,kn' }, 
+                'google_translate_element'
+            );
+        }
+
+        function changeLanguage() {
+            var lang = document.getElementById("googleLang").value;
+            var selectElem = document.querySelector(".goog-te-combo");
+            
+            if (selectElem) {
+                selectElem.value = lang;
+                selectElem.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_element {
+            display: none;
+        }
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .goog-te-spinner-pos,
+        iframe.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style>
+   
+    <marquee id="marquee" behavior="scroll" direction="left">
+        <h3 style="color: #e74c3c;">GRUHJEEVANDEEP : A non-profit organization of holistic guide for better education, agriculture, medical, and government policies.</h3>
+    </marquee>
+    <header>
+        <div class="image-gallery">
+          <div class="image-gallery-row">
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="mySlides fade">
+                    <img src="https://wallpapercave.com/wp/wp10648969.jpg" alt="Image 1" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.HKRNY2T1TP-KDTmOQh1nuwHaEK&pid=Api&P=0&h=180" alt="Image 2" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://wallpapercave.com/wp/wp2916561.jpg" alt="Image 3" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://wallpapercave.com/wp/wp3708739.jpg" alt="Image 4" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://wallpapercave.com/wp/wp9212197.jpg" alt="Image 5" class="frame-image">
+                </div>
+
+        </div>
+        <style>
+            .image-gallery {
+                text-align: center;
+                padding: 40px;
+                background-color: #f0f8ff;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-top: 40px;
+            }
+        
+            .image-gallery h2 {
+                font-size: 2.5em;
+                color: #2c3e50;
+                margin-bottom: 30px;
+                text-transform: uppercase;
+            }
+        
+            .slideshow-container {
+                position: relative;
+                max-width: 100%;
+                margin: auto;
+            }
+        
+            /* Hide all images by default */
+            .mySlides {
+                display: none;
+            }
+        
+            .frame-image {
+                width: 100%;
+                height: 400px;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            /* Fade animation for slides */
+            .fade {
+                animation-name: fade;
+                animation-duration: 3s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+        
+            /* Keyframes for fade effect */
+            @keyframes fade {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+        </style>
+        <script>
+            let slideIndex = 0;
+        
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+        
+                // Loop through all slides and hide them
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+        
+                // Show the current slide
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+        
+                slides[slideIndex - 1].style.display = "block";
+        
+                // Call showSlides every 3 seconds to move to the next slide
+                setTimeout(showSlides, 3000);
+            }
+        
+            showSlides();  // Start the slideshow
+        </script>
+    </header>
+    <nav id="agri">
+        <a href="#organizations">organizations </a>
+        <a href="#schemes">Subsidies and Schemes</a>
+    </nav>
+        <header><h1>Organizations</h1></header>
+        <div class="container" id="organizations">
+        <div class="row">
+            <br><br><br>
+            <div class="organization">
+                <h3>Telangana State Seed and Organic Certification Authority (TSSOCA)</h3>
+                <p>A statutory organization under the Agriculture & Cooperation Department of the Government of Telangana, responsible for seed certification and organic certification in the state.</p>
+                <a href="https://tssoca.telangana.gov.in" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+            <div class="organization">
+                <h3>Telangana Organic Certification Authority (TOCA)</h3>
+                <p>Provides organic certification for farmers and trade bodies in Telangana.</p>
+                <a href="https://tssoca.telangana.gov.in" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+            <div class="organization">
+                <h3>Paramparagat Krishi Vikas Yojana (PKVY)</h3>
+                <p>A central government scheme implemented in Telangana to promote organic farming through traditional practices.</p>
+                <a href="https://pgsindia-ncof.gov.in/" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="organization">
+                <h3>Centre for Sustainable Agriculture (CSA)</h3>
+                <p>Focusing on research and education in organic farming in Telangana.</p>
+                <a href="https://csa-india.org" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+            <div class="organization">
+                <h3>Sahaja Aharam Producer Company Limited</h3>
+                <p>A federation of farmer-producer organizations in Telangana and Andhra Pradesh that promotes organic farming and provides market linkages.</p>
+                <a href="https://www.sahajaaharam.in/" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+            <div class="organization">
+                <h3>Ekalavya Foundation</h3>
+                <p>Assists farmers with organic certification and training.</p>
+                <a href="https://ekalavya.net/agriculture/" target="_blank"><button type="button">Go to Website</button></a>
+            </div>
+        </div>
+    </div>
+    
+
+    <header>
+        <h1>Government Schemes and Subsidies</h1>
+    </header>
+
+    <main>
+        <div class="container" id="schemes">
+            <div class="row">
+            <div class="scheme">
+                <h2>Paramparagat Krishi Vikas Yojana (PKVY)</h2>
+                <p><strong>Scheme Overview:</strong> PKVY supports farmers in adopting organic farming by providing financial assistance for inputs, organic certification, and training.</p>
+                <p><strong>Providing Organization:</strong> Ministry of Agriculture and Farmers Welfare, Government of India</p>
+                <p><strong>Apply Here:</strong> <a href="https://pgsindia-ncof.gov.in/" target="_blank">Centre for Organic Farming</a></p>
+            </div>
+
+            <div class="scheme">
+                <h2>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h2>
+                <p><strong>Scheme Overview:</strong> PMKSY aims to enhance irrigation coverage and improve water use efficiency by providing financial support for irrigation systems like drip and sprinkler systems.</p>
+                <p><strong>Providing Organization:</strong> Ministry of Water Resources, Government of India</p>
+                <p><strong>Apply Here:</strong> <a href="http://pmksy.gov.in/" target="_blank">PMKSY Website</a></p>
+            </div>
+
+            <div class="scheme">
+                <h2>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h2>
+                <p><strong>Scheme Overview:</strong> PMFBY offers insurance coverage to farmers for crop loss due to natural calamities, pests, and diseases.</p>
+                <p><strong>Providing Organization:</strong> Ministry of Agriculture and Farmers Welfare, Government of India</p>
+                <p><strong>Apply Here:</strong> <a href="https://pmfby.gov.in/" target="_blank">PMFBY Website</a></p>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="scheme">
+                <h2>Micro Irrigation Fund (MIF)</h2>
+                <p><strong>Scheme Overview:</strong> The MIF provides financial assistance for the installation of micro-irrigation systems such as drip and sprinkler irrigation to save water and increase crop yield.</p>
+                <p><strong>Providing Organization:</strong> NABARD (National Bank for Agriculture and Rural Development)</p>
+                <p><strong>Apply Here:</strong> <a href="https://www.nabard.org/" target="_blank">NABARD Website</a></p>
+            </div>
+
+            <div class="scheme">
+                <h2>Sub-Mission on Agricultural Mechanization (SMAM)</h2>
+                <p><strong>Scheme Overview:</strong> SMAM promotes agricultural mechanization by providing subsidies for purchasing farm equipment such as tractors, combine harvesters, etc.</p>
+                <p><strong>Providing Organization:</strong> Ministry of Agriculture and Farmers Welfare, Government of India</p>
+                <p><strong>Apply Here:</strong> <a href="http://www.agrimachinery.nic.in/" target="_blank">SMAM Website</a></p>
+            </div>
+
+            <div class="scheme">
+                <h2>Weather-based Crop Insurance Scheme (WBCIS)</h2>
+                <p><strong>Scheme Overview:</strong> WBCIS offers insurance for crops affected by adverse weather conditions such as excess rainfall, drought, or floods.</p>
+                <p><strong>Providing Organization:</strong> Ministry of Agriculture and Farmers Welfare, Government of India</p>
+                <p><strong>Apply Here:</strong> <a href="https://pmfby.gov.in/" target="_blank">PMFBY Website</a></p>
+            </div>
+            </div>
+        </div>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+    <div class="header">
+        <h1>Waste Decomposer</h1>
+        <p>A Revolutionary Solution for Sustainable Agriculture</p>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>What is Waste Decomposer?</h2>
+            <p>Waste Decomposer is a bio-degradable solution developed by the <strong>National Centre of Organic Farming</strong> under the Ministry of Agriculture & Farmers Welfare, Government of India. This single bottle can decompose over 1 lakh metric tonnes of bio-waste in just 30 days, improving soil fertility and supporting organic farming.</p>
+        </div>
+
+        <div class="content">
+            <h2>Directions for Use</h2>
+            <h3>Mass Multiplication</h3>
+            <ul>
+                <li>Mix 2 kg of jaggery in 200 liters of water.</li>
+                <li>Open the waste decomposer bottle and add its contents to the solution.</li>
+                <li>Stir well and cover the container with a cloth.</li>
+                <li>Stir daily for 7 days, and the solution will be ready for use.</li>
+            </ul>
+
+            <h3>Composting</h3>
+            <ul>
+                <li>Spread 1 tonne of waste material in a layer.</li>
+                <li>Spray the waste decomposer solution over it.</li>
+                <li>Add another layer of waste material and repeat spraying.</li>
+                <li>Maintain 60% moisture and turn the compost every 7 days.</li>
+                <li>Compost will be ready in 30-40 days.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Benefits in Agriculture</h2>
+            <p>Waste decomposer plays a crucial role in organic farming, reducing dependency on chemical fertilizers and enhancing soil fertility. It helps farmers manage crop residue effectively, leading to increased crop yields and sustainability.</p>
+        </div>
+
+        <div class="content">
+            <h2>Government Initiative</h2>
+            <p>The Indian government is actively promoting waste decomposer technology through various awareness programs and distribution channels to help farmers transition to organic farming methods.</p>
+        </div>
+    </div>
+    <header>
+        <h1>Vijay Ram Organic Farming</h1>
+        <p>Promoting Zero Budget Natural Farming (ZBNF) for a sustainable future</p>
+    </header>
+    
+    <section class="about">
+        <h2>About Vijay Ram</h2>
+        <p>Vijay Ram is a prominent advocate of Zero Budget Natural Farming (ZBNF), emphasizing natural farming techniques that minimize the use of chemicals and promote sustainable agriculture.</p>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.47118CQDLAL5uqnDgK5-eQHaEK&pid=Api" alt="Vijay Ram Interview">
+        <p>Vijay Ram has been a major contributor in spreading awareness about organic farming. His mission is to educate farmers and encourage them to adopt sustainable methods.</p>
+        <p>With years of experience in organic farming, Vijay Ram has conducted numerous workshops and seminars to guide farmers in adopting eco-friendly agricultural practices.</p>
+        <p>His expertise has led to collaborations with various agricultural institutions and non-profit organizations to further promote sustainable farming techniques.</p>
+        <p>Through his initiatives, he has helped thousands of farmers transition to organic methods, reducing their dependency on chemical fertilizers and pesticides.</p>
+        <img src="https://example.com/vijay-ram-photo.jpg" alt="Vijay Ram">
+    </section>
+    
+    
+    <section class="farming-techniques">
+        <h2>Natural Farming Techniques</h2>
+        <ul>
+            <li><strong>Jeevamrutha:</strong> A natural fertilizer using cow dung, urine, jaggery, and pulse flour.</li>
+            <li><strong>Bijamrita:</strong> Seed treatment solution for pest resistance.</li>
+            <li><strong>Mulching:</strong> Covering soil with organic material to retain moisture.</li>
+            <li><strong>Inter-cropping:</strong> Growing different crops together for soil health.</li>
+            <li><strong>Water Management:</strong> Techniques like contour trenching to conserve rainwater.</li>
+        </ul>
+        <img src="https://tse2.mm.bing.net/th?id=OIP.jrb0TUqfLgQpgP2SzE0IkwHaEK&pid=Api" alt="Natural Farming">
+        <p>Natural farming not only improves soil fertility but also reduces dependency on artificial fertilizers, ensuring a healthier yield.</p>
+    </section>
+    
+    <section class="benefits">
+        <h2>Benefits of Organic Farming</h2>
+        <ul>
+            <li>Better soil health and fertility.</li>
+            <li>Reduced environmental pollution.</li>
+            <li>Healthier and more nutritious produce.</li>
+            <li>Increased biodiversity and sustainability.</li>
+        </ul>
+        <img src="https://tse3.mm.bing.net/th?id=OIP.ADP2wsqJ0GFJY6frDBS1NgHaEK&pid=Api" alt="Organic Farming Benefits">
+        <p>By choosing organic farming, we contribute to a sustainable and chemical-free future.</p>
+    </section>
+    
+    <section class="events">
+        <h2>Notable Events</h2>
+        <p>In 2017, Vijay Ram participated in the "Organic Farming Sustainable Integrated Development" convention, promoting organic farming.</p>
+        <img src="https://tse4.mm.bing.net/th?id=OIP._axydS4v1gN440qlY7nWoAHaEK&pid=Api" alt="Organic Farming Event">
+    </section>
+    <section class="events">
+        <div class="zbnf-info">
+            <h2>Zero Budget Natural Farming (ZBNF)</h2>
+            <p>Zero Budget Natural Farming (ZBNF) is a holistic approach to farming that aims to make agriculture more affordable and sustainable. The key principle behind ZBNF is that farmers can grow crops without the need for chemical fertilizers, pesticides, or expensive inputs. Instead, it emphasizes using locally available resources and traditional knowledge to grow crops in harmony with nature.</p>
+        
+            <h3>Core Principles of ZBNF:</h3>
+            <ul>
+                <li><strong>Natural Farming:</strong> ZBNF advocates the use of natural inputs such as compost, organic matter, and bio-pesticides to nurture crops, rather than relying on chemical fertilizers or synthetic pesticides.</li>
+                <li><strong>Soil Health:</strong> It focuses on improving soil fertility naturally, enhancing its ability to retain water, nutrients, and promote healthy plant growth.</li>
+                <li><strong>Water Conservation:</strong> ZBNF promotes the use of water-efficient techniques such as mulching, crop rotation, and proper irrigation methods to conserve water.</li>
+                <li><strong>Low-Cost Inputs:</strong> ZBNF minimizes the need for external inputs, reducing the cost of farming and thus making it more financially viable for farmers.</li>
+                <li><strong>Self-Sufficiency:</strong> It encourages farmers to rely on locally available resources such as cow dung, cow urine, and other organic matter, thereby creating a self-sustaining farming ecosystem.</li>
+            </ul>
+        
+            <h3>Benefits of ZBNF:</h3>
+            <ul>
+                <li>Reduction in the cost of farming inputs such as fertilizers and pesticides.</li>
+                <li>Improvement in soil health and fertility over time.</li>
+                <li>Increased resilience of crops to diseases and pests due to natural farming practices.</li>
+                <li>Better water conservation and management, especially in drought-prone areas.</li>
+                <li>Promotion of biodiversity and ecological balance in farming systems.</li>
+            </ul>
+        
+            <p>ZBNF has gained popularity as a solution to combat the over-dependence on chemical inputs, and it has been embraced by various farming communities, particularly in India, as a means to improve agricultural productivity while safeguarding the environment.</p>
+        </div>
+        
+    </section>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: linear-gradient(90deg, #4CAF50, #8BC34A);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    section {
+        padding: 20px;
+        background: white;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        background: #e0f7fa;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    footer {
+            background: linear-gradient(135deg, #6f42c1, #e83e8c);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+</style>
+<section class="events">
+<div class="waste-decomposer">
+    <h1>Waste Decomposer</h1>
+    <p>This single bottle decomposes bio-waste of more than 1 lakh metric tonnes just in 30 days!</p>
+     <img src="wm.jpg" width="20%" height="60%">
+    <h2>Directions for Use</h2>
+
+    <h3>Mass Multiplication</h3>
+    <ul>
+        <li>Mix 2 kg of jaggery in 200 liters of water in a container and stir well.</li>
+        <li>Open the bottle and pour the contents of the bottle into the solution (avoid direct contact of contents with hands).</li>
+        <li>Stir the contents of the container and cover it with a paper/cardboard, etc., and stir it daily once. The solution will be ready in 7 days.</li>
+    </ul>
+
+    <h3>Composting</h3>
+    <ul>
+        <li>Spread 1 tonne of waste material.</li>
+        <li>Wet it with decomposer solution.</li>
+        <li>Spread one more layer of waste material above the existing layer.</li>
+        <li>Wet it with decomposer solution over the layer.</li>
+        <li>Maintain 60% moisture during the entire period of composting with waste decomposer solution.</li>
+        <li>Turn over the compost at 7-day intervals. If required, wet the waste again with the decomposer solution.</li>
+        <li>The compost is ready to use within 30-40 days.</li>
+    </ul>
+
+    <h3>Foliar Spray</h3>
+    <ul>
+        <li>Spray the decomposer solution on all crops up to 50% every 7th day.</li>
+        <li>For vegetable crops, spray 40% every 3rd day.</li>
+        <li>For fruit crops, spray 60% every 7th day.</li>
+    </ul>
+
+    <h3>Drip Irrigation</h3>
+    <p>Use 200 liters of solution per acre.</p>
+
+    <h3>In-Situ Composting of Crop Residue</h3>
+    <p>Spray 200 liters of solution per acre on the post-harvest stalks of crop plants.</p>
+
+    <h3>Seed Treatment</h3>
+    <ol>
+        <li>Simply spray or sprinkle the waste decomposer solution uniformly over any type of seeds.</li>
+        <li>Leave the treated seeds under shade for 30 minutes.</li>
+        <li>After 30 minutes, the seeds are ready for sowing.</li>
+    </ol>
+
+    <h2>For Further Details</h2>
+    <p>National Centre of Organic Farming<br>
+        Ministry of Agriculture & Farmers Welfare, Government of India<br>
+        Hapur Road, Kamla Nehru Nagar, Ghaziabad-201002</p>
+</div>
+</section>
+    </main>
+    <script src="script.js"></script>
+<!-- Footer -->
+<footer>
+    &copy; 2025 GRUH JEEVAN DEEP | Empowering Through Knowledge
+</footer>
+</body>
+</html>

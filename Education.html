@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="edu_style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="GJD_logo.png" alt="Logo" style="height: 30px;" onclick="location.reload();">GRUHJEEVANDEEP - Education</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fas fa-home" style="color: #2ecc71;"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Education.html"><i class="fas fa-book" style="color: #3498db;"></i> Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="healthcare.html"><i class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agri.html"><i class="fas fa-tractor" style="color: green;"></i> Agriculture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="google_translate_element"></div>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: 'en', includedLanguages: 'en,ml,ta,hi,te,kn' }, 
+                'google_translate_element'
+            );
+        }
+
+        function changeLanguage() {
+            var lang = document.getElementById("googleLang").value;
+            var selectElem = document.querySelector(".goog-te-combo");
+            
+            if (selectElem) {
+                selectElem.value = lang;
+                selectElem.dispatchEvent(new Event("change"));
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_element {
+            display: none;
+        }
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .goog-te-spinner-pos,
+        iframe.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+    </style>
+    <marquee id="marquee" behavior="scroll" direction="left">
+        <h3 style="color: #e74c3c;">GRUHJEEVANDEEP : A non-profit organization of holistic guide for better education, agriculture, medical, and government policies.</h3>
+    </marquee>
+    <!-- Hero Section -->
+    <div class="hero">
+        Empowering Students with Knowledge & Opportunities
+    </div>
+</head>
+<body>
+    <header>
+        <div class="image-gallery">
+          <div class="image-gallery-row">
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="mySlides fade">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0E81zY5yFgw_nXcDxNCy0wOfnMwvzmQrq7Y7lua6U4VnXzJ6is3V1UxPQ-meJif-K6qlGdP6YIV_N23Qtu7WoEaOtw0aaLO6BDFz5nZCz_tIzp5u300l_vExHOKdmRsa5cx81QAgn8BHd0JGTotpZg1O7fXyQeXHHQs6Ak1-fxUCbzTJqgnpt8TK4/w640-h338-rw/pm-e-vidhya-min.jpg" alt="Image 1" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://static.pib.gov.in/WriteReadData/userfiles/image/image007OHF7.png" alt="Image 2" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://5.imimg.com/data5/GU/BJ/AC/SELLER-37179245/startup-india-registration-500x500.jpg" alt="Image 3" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-8WrbGZ3RFDypTnTDuOYV-OYUf1tpqMwTJg&s" alt="Image 4" class="frame-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://dsel.education.gov.in/themes/school_education/assets/images/NEP-2020.png" alt="Image 5" class="frame-image">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0;
+        
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+        
+                // Loop through all slides and hide them
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+        
+                // Show the current slide
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+        
+                slides[slideIndex - 1].style.display = "block";
+        
+                // Call showSlides every 3 seconds to move to the next slide
+                setTimeout(showSlides, 3000);
+            }
+        
+            showSlides();  // Start the slideshow
+        </script>
+    </header>
+    <br>
+    <nav>
+        <a href="#scholarship"><h3>Scholarships</h3></a>
+        <a href="#Exams"><h3>Competitive Exams</h3></a>
+        <a href="#Organisations"><h3>Organizations</h3></a>
+    </nav>
+        <div class="container" id="scholarship">
+        <h1>Scholarships for Telangana Students</h1>
+        <br>
+            <div class="scholarships">
+                <div class="row">
+                
+                <div class="scholarship">
+                    <h2>National Means-cum-Merit Scholarship (NMMS)</h2>
+                    <p><strong>For:</strong> Class 8 students from economically weaker sections</p>
+                    <p><strong>Scholarship Amount:</strong> ₹12,000 per year (₹1,000 per month) till Class 12</p>
+                    <p><strong>Exam Pattern:</strong>Mental Ability Test (MAT) and Scholastic Aptitude Test (SAT)</p> 
+                    <p><strong>Eligibility:</strong>Family income should be less than ₹3.5 lakh per annum</p> 
+                    <p><strong>Official Website:</strong> <a href="https://bse.telangana.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                </div>
+                    <div class="scholarship">
+                        <h2>Telangana National Talent Search Examination (NTSE)</h2>
+                        <p><strong>For:</strong> Class 10 students</p>
+                        <p><strong>Scholarship Amount:</strong> ₹1,250 - ₹2,000 per month</p>
+                        <p><strong>Exam Pattern: </strong>MAT (Mental Ability Test) and SAT (Scholastic Aptitude Test)</p>
+                        <p><strong>Eligibility:</strong> Open to all Class 10 students studying in recognized schools</p>
+                        <p><strong>Application & Exam:</strong> Conducted in two stages – State Level (November) and National Level (May)</p>
+                        <p><strong>Official Website:</strong> <a href="https://ncert.nic.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="scholarship">
+                        <h2>Indian National Olympiad (INO)</h2>
+                        <p><strong>For:</strong> Class 9-12 students (Math, Science, Astronomy)</p>
+                        <p><strong>Scholarship: </strong>Selected students get training for international competitions and merit-based rewards</p>
+                        <p><strong>Application & Exam: </strong>Stage-wise selection from state to national level (October to February)</p>
+                        <p><strong>Official Website:</strong> <a href="https://olympiads.hbcse.tifr.res.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="scholarship">
+                        <h2>Kishore Vaigyanik Protsahan Yojana (KVPY)</h2>
+                        <p><strong>For:</strong> Science students in Class 11, 12, UG</p>
+                        <p><strong>Scholarship Amount:</strong> ₹5,000 - ₹7,000 per month</p>
+                        <p><strong>Exam Pattern:</strong>MCQ-based questions in Physics, Chemistry, Mathematics, and Biology</p>
+                        <p><strong>Eligibility:</strong> Science stream students with good academic performance</p>
+                        <p><strong>Application & Exam:</strong> Registration usually starts in July, exam in November</p>
+                        <p><strong>Official Website:</strong> <a href="https://www.iisc.ac.in/kvpy/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="scholarship">
+                        <h2>Inspire Scholarship (Innovation in Science Pursuit for Inspired Research)</h2>
+                        <p><strong>For:</strong> Top 1% performers in Class 12 Science stream</p>
+                        <p><strong>Scholarship: </strong>₹80,000 per year for higher education in science</p>
+                        <p><strong>Eligibility:</strong>  Students who score high in Class 12 board exams and pursue science</p>
+                        <p><strong>Application & Exam: </strong> Based on board results, no separate exam</p>
+                        <p><strong>Official Website:</strong> <a href="https://online-inspire.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="scholarship">
+                        <h2>Pragati & Saksham Scholarships (for Girls & Disabled Students)</h2>
+                        <p><strong>For:</strong> Students pursuing technical or engineering education</p>
+                        <p><strong>Scholarship Amount:</strong> ₹50,000 per year</p>
+                        <p><strong>Exam Pattern: </strong>MAT (Mental Ability Test) and SAT (Scholastic Aptitude Test)</p>
+                        <p><strong>Eligibility:</strong>  Girls (Pragati) or physically disabled students (Saksham) in AICTE-approved colleges</p>
+                        <p><strong>Application & Exam:</strong> Merit-based selection, no specific exam</p>
+                        <p><strong>Official Website: </strong> <a href="https://scholarships.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="container" id="Exams">
+            <h1>Competitive Exams</h1>
+            
+            <div class="exams-section">
+                <h2>Government Exams</h2>
+                <div class="exams">
+                    <div class="exam">
+                        <h3>JEE (Main & Advanced)</h3>
+                        <p>Conducted for admissions into top engineering institutes like IITs, NITs, and IIITs.</p>
+                        <p>Tests physics, chemistry, and mathematics skills.</p>
+                        <p><strong>Official Website: </strong><a href="https://jeemain.nta.nic.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>NEET</h3>
+                        <p>National entrance exam for medical courses like MBBS and BDS in India.</p>
+                        <p>Tests biology, chemistry, and physics knowledge.</p>
+                        <p><strong>Official Website: </strong><a href="https://neet.nta.nic.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>UPSC Civil Services</h3>
+                        <p>One of the toughest exams for recruitment into IAS, IPS, IFS, and other central services.</p>
+                        <p>Includes preliminary, mains, and interview rounds.</p>
+                        <p><strong>Official Website: </strong><a href="https://www.upsc.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>TSPSC Groups</h3>
+                        <p>Conducted for various administrative posts in Telangana state government.</p>
+                        <p>Includes different group-level exams for various services.</p>
+                        <p><strong>Official Website: </strong><a href="https://www.tspsc.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>APPSC Groups</h3>
+                        <p>Similar to TSPSC but for Andhra Pradesh state government posts.</p>
+                        <p>Includes Group I, II, III, and IV exams.</p>
+                        <p><strong>Official Website: </strong><a href="https://psc.ap.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>GATE</h3>
+                        <p>Entrance exam for M.Tech admissions and PSU jobs.</p>
+                        <p>Tests technical knowledge in engineering disciplines.</p>
+                        <p><strong>Official Website: </strong><a href="https://gate.iitkgp.ac.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="exams-section">
+                <h2>Private Exams</h2>
+                <div class="exams">
+                    <div class="exam">
+                        <h3>BITSAT</h3>
+                        <p>Online entrance exam for admission to BITS Pilani and its campuses.</p>
+                        <p>Tests physics, chemistry, math, logical reasoning, and English proficiency.</p>
+                        <p><strong>Official Website: </strong><a href="https://www.bitsadmission.com/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>VITEEE</h3>
+                        <p>Entrance exam for admission into VIT University engineering programs.</p>
+                        <p>Tests physics, chemistry, mathematics, and English.</p>
+                        <p><strong>Official Website: </strong><a href="https://viteee.vit.ac.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                    <div class="exam">
+                        <h3>SRMJEEE</h3>
+                        <p>Conducted for admissions into SRM University engineering courses.</p>
+                        <p>Tests physics, chemistry, and mathematics.</p>
+                        <p><strong>Official Website: </strong><a href="https://www.srmist.edu.in/" target="_blank"><button type="button">Go to Website</button></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container2" id="Organisations">
+            
+            <h1>Organizations Providing Free Education</h1>
+            <br><br>
+            <div class="container1">
+                <h2>🌟 Khan Academy: Free Learning Platform</h2><br>
+                <img src="https://support.khanacademy.org/hc/article_attachments/360007440612/KhanKids_LogoBanner_Landscape.jpg" alt="Khan Academy Logo" width="80%" height=auto>
+                
+                <h3>📚 About Khan Academy</h3>
+                <p>Khan Academy is a non-profit organization providing free, world-class education for anyone, anywhere. Founded by <b>Sal Khan</b> in 2008, it offers courses in various subjects like Math, Science, Computing, Economics, and more.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ Free Courses & Interactive Learning</li>
+                    <li>✔️ Personalized Learning Dashboard</li>
+                    <li>✔️ Available in 50+ Languages</li>
+                    <li>✔️ Trusted by NASA, MIT, and More</li>
+                </ul>
+        
+                <h3>📖 Subjects Offered</h3>
+                <ul>
+                    <li>📌 <b>Mathematics</b> (Basic to Advanced Calculus)</li>
+                    <li>📌 <b>Science</b> (Physics, Chemistry, Biology, Engineering)</li>
+                    <li>📌 <b>Computer Science</b> (Programming, AI, Data Structures)</li>
+                    <li>📌 <b>Economics & Finance</b> (Micro & Macro Economics)</li>
+                    <li>📌 <b>Test Prep</b> (SAT, MCAT, LSAT, IIT JEE, GMAT)</li>
+                </ul>
+                
+                <h3>🌍 Learn Anytime, Anywhere</h3>
+                <p>Khan Academy allows self-paced learning for students, teachers, and lifelong learners.</p>
+                
+                <a href="https://www.khanacademy.org/" target="_blank">
+                    <button>🌐 Visit Khan Academy</button>
+                </a>
+            </div>
+            <br>
+            <div class="container1">
+                <h2>🌟 PM eVidya: One Nation, One Digital Platform</h2><br>
+                <img src="https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2022/06/21075043/pm-e-vidya-scheme-registration-course-list.jpg" alt="PM eVidya Logo" width="80%" height=auto>
+                
+                <h3>📚 About PM eVidya</h3>
+                <p>PM eVidya is a government initiative aimed at providing digital education to students across India through multiple platforms, including TV channels, radio, and online learning portals.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ One Nation, One Digital Platform</li>
+                    <li>✔️ DIKSHA: Free e-Learning Portal</li>
+                    <li>✔️ Dedicated TV Channels for Classes 1-12 (Swayam Prabha)</li>
+                    <li>✔️ Community Radio & Podcasts for Learning</li>
+                </ul>
+        
+                <h3>📖 Educational Resources</h3>
+                <ul>
+                    <li>📌 <b>DIKSHA Portal</b> (E-books, Video Lessons, Assessments)</li>
+                    <li>📌 <b>Swayam Prabha</b> (24x7 Educational TV Channels)</li>
+                    <li>📌 <b>ePathshala</b> (NCERT Digital Library)</li>
+                    <li>📌 <b>Community Radio</b> (Audio Learning Content)</li>
+                </ul>
+                
+                <h3>🌍 Accessible Learning for All</h3>
+                <p>PM eVidya ensures inclusive education by making digital content available to students in remote areas through TV, radio, and online platforms.</p>
+                
+                <a href="https://pmevidya.education.gov.in/" target="_blank">
+                    <button>🌐 Visit PM eVidya</button>
+                </a>
+            </div>
+        <br>
+            <div class="container1">
+                <h2>🌟 NPTEL: National Programme on Technology Enhanced Learning</h2><br>
+                <img src="https://mite.ac.in/wp-content/uploads/2020/01/nptel-mite.jpg" alt="NPTEL Logo" width="80%" height=auto>
+                
+                <h3>📚 About NPTEL</h3>
+                <p>NPTEL is an initiative by the IITs and IISc to offer free online courses in engineering, science, management, and humanities. It provides certification and high-quality education for learners worldwide.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ Free Online Courses by IITs & IISc</li>
+                    <li>✔️ Video Lectures & Assignments</li>
+                    <li>✔️ Certification on Exam Completion</li>
+                    <li>✔️ Industry-Relevant Content</li>
+                </ul>
+        
+                <h3>📖 Subjects Offered</h3>
+                <ul>
+                    <li>📌 <b>Engineering</b> (Computer Science, Electrical, Mechanical, Civil, etc.)</li>
+                    <li>📌 <b>Science</b> (Physics, Chemistry, Mathematics, Biology)</li>
+                    <li>📌 <b>Management</b> (Finance, Marketing, Operations)</li>
+                    <li>📌 <b>Humanities</b> (Economics, Psychology, English Literature)</li>
+                </ul>
+                
+                <h3>🌍 Learn Anytime, Anywhere</h3>
+                <p>NPTEL provides flexible learning with video lectures and assignments for students, professionals, and educators.</p>
+                
+                <a href="https://nptel.ac.in/" target="_blank">
+                    <button>🌐 Visit NPTEL</button>
+                </a>
+            </div>
+            <br>
+            <div class="container1">
+                <h2>🌟 Teach For India: Quality Education for All</h2><br>
+                <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2022-03/04/full/20220304132824.jpg" alt="Teach For India Logo" width="80%" height=auto>
+                
+                <h3>📚 About Teach For India</h3>
+                <p>Teach For India is a non-profit organization that aims to provide an excellent education to all children by recruiting and training young leaders to teach in underprivileged schools.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ Fellowship Program for Young Leaders</li>
+                    <li>✔️ Focus on Leadership & Educational Reform</li>
+                    <li>✔️ Works with Underprivileged Schools</li>
+                    <li>✔️ Strong Alumni Network Driving Change</li>
+                </ul>
+        
+                <h3>📖 How You Can Help</h3>
+                <ul>
+                    <li>📌 <b>Join as a Fellow</b> (Teach in Schools for 2 Years)</li>
+                    <li>📌 <b>Donate</b> (Support Education Initiatives)</li>
+                    <li>📌 <b>Volunteer</b> (Be Part of the Change)</li>
+                    <li>📌 <b>Spread Awareness</b> (Advocate for Education)</li>
+                </ul>
+                
+                <h3>🌍 Transforming Education in India</h3>
+                <p>Teach For India is creating a movement of leaders committed to ending educational inequity in India.</p>
+                
+                <a href="https://www.teachforindia.org/" target="_blank">
+                    <button>🌐 Visit Teach For India</button>
+                </a>
+            </div>
+        <br>
+            <div class="container1">
+                <h2>🌟 Pratham Education Foundation: Education for Every Child</h2><br>
+                <img src="https://engochallenge.org/wp-content/uploads/2021/05/Logo-Pratham.jpg" alt="Pratham Logo" width="80%" height=auto>
+                
+                <h3>📚 About Pratham</h3>
+                <p>Pratham Education Foundation is a non-profit organization dedicated to improving the quality of education in India by providing innovative learning programs for children and youth.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ Focus on Foundational Learning & Literacy</li>
+                    <li>✔️ Digital Learning & Skill Development Programs</li>
+                    <li>✔️ Early Childhood Education & Remedial Programs</li>
+                    <li>✔️ Research-Backed Teaching Methods</li>
+                </ul>
+        
+                <h3>📖 Programs Offered</h3>
+                <ul>
+                    <li>📌 <b>ASER (Annual Status of Education Report)</b> - National Education Survey</li>
+                    <li>📌 <b>Hybrid Learning</b> - Digital Education for All</li>
+                    <li>📌 <b>Vocational Training</b> - Job-Ready Skill Development</li>
+                    <li>📌 <b>Community-Based Learning</b> - Empowering Rural Areas</li>
+                </ul>
+                
+                <h3>🌍 Transforming Education in India</h3>
+                <p>Pratham is working towards ensuring that every child in India has access to quality education and a bright future.</p>
+                
+                <a href="https://www.pratham.org/" target="_blank">
+                    <button>🌐 Visit Pratham</button>
+                </a>
+            </div>
+        <br>
+            <div class="container1">
+                <h2>🌟 Room to Read: Transforming Education for Children</h2><br>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQemSfU-CxbO4ElkWqFh96ugNfTuoTEKB0UQ&s" alt="Room to Read Logo" width="80%" height=auto>
+                
+                <h3>📚 About Room to Read</h3>
+                <p>Room to Read is a global nonprofit organization focused on improving literacy and gender equality in education for children across the world. They develop literacy skills and a habit of reading among primary school children and support girls to complete secondary school with the skills necessary to negotiate key life decisions.</p>
+                
+                <h3>🔑 Key Features</h3>
+                <ul>
+                    <li>✔️ Literacy Programs</li>
+                    <li>✔️ Girls’ Education Programs</li>
+                    <li>✔️ Local Language Book Publishing</li>
+                    <li>✔️ Community Engagement in Education</li>
+                </ul>
+        
+                <h3>📖 Educational Resources</h3>
+                <ul>
+                    <li>📌 <b>Early Literacy Programs</b> (Building literacy skills in primary school children)</li>
+                    <li>📌 <b>Girls’ Education Programs</b> (Supporting girls to complete secondary education)</li>
+                    <li>📌 <b>Library Programs</b> (Providing access to books and learning resources)</li>
+                    <li>📌 <b>Local Language Publishing</b> (Creating books in local languages for children)</li>
+                </ul>
+                
+                <h3>🌍 Empowering Children and Communities</h3>
+                <p>Room to Read works to create a world where all children can achieve their full potential and lead productive lives. Their programs focus on improving educational outcomes and gender equality in communities across Asia and Africa.</p>
+                
+                <a href="https://www.roomtoread.org" target="_blank">
+                    <button>🌐 Visit Room to Read</button>
+                </a>
+            </div>
+        </div>
+        
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 GRUH JEEVAN DEEP | Empowering Through Knowledge
+    </footer>
+
+</body>
+</html>
