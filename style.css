@@ -32,9 +32,9 @@ nav a:hover {
             object-fit: cover;
         }
         /* Close Button Styling */
-        #close-btn {
+       #close-btn {
             position: absolute;
-            buttom: 20px;
+            bottom: 20px;
             right: 20px;
             font-size: 30px;
             background: rgb(248, 186, 186);
