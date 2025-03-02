@@ -1,7 +1,7 @@
 nav {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(243, 62, 62);
 }
 nav a {
     color: rgb(0, 0, 0);
@@ -32,7 +32,7 @@ nav a:hover {
             object-fit: cover;
         }
         /* Close Button Styling */
-       #close-btn {
+        #close-btn {
             position: absolute;
             bottom: 20px;
             right: 20px;
