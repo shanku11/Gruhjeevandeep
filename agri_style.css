@@ -11,24 +11,20 @@ header {
     padding: 15px;
     text-align: center;
 }
-
 nav {
     display: flex;
     justify-content: center;
     background-color: white;
 }
-
 nav a {
     color: rgb(0, 0, 0);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
-
 nav a:hover {
     background-color: #aee46b;
 }
-
 .container {
     padding: 20px;
 }
