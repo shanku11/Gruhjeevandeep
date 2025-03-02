@@ -30,6 +30,12 @@
             document.getElementById("video-container").style.display = "none";
             document.getElementById("marquee-container").style.marginTop = "0";
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("intro-video");
+    video.muted = true; // Ensures autoplay works
+    video.play().catch(error => console.log("Autoplay blocked:", error));
+});
+
         // Volume Control
         let video = document.getElementById("intro-video");
         let volumeControl = document.getElementById("volume-control");
@@ -37,18 +43,6 @@
             video.volume = volumeControl.value;
         });
     </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <style>
-       @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-    .container {
-        flex-direction: column;
-    }
-}
-
-       </style>
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -59,8 +53,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div></div>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav" style="background-color: rgb(225, 225, 225);">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html"><i class="fas fa-home" style="color: #2ecc71;"></i> Home</a>
@@ -77,23 +70,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a>
                 </li>
-
-                <!-- Language Dropdown -->
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        English
-                    </button>
-                    <ul class="dropdown-menu" id="languageList">
-                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="te">Telugu</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="ta">Tamil</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="kn">Kannada</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="ml">Malayalam</a></li>
-                    </ul>
-                </div>
             </ul>
-        </div>
+        </div>          
+    </div><div></div>
+    <!-- Language Dropdown -->
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            English
+        </button>
+        <ul class="dropdown-menu" id="languageList">
+            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="te">Telugu</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="ta">Tamil</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="kn">Kannada</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="ml">Malayalam</a></li>
+        </ul>
     </div>
 </nav>
 
@@ -242,7 +234,7 @@
 <br>
 <section class="highlight-section2" id="contact">
     <h2 id="contactTitle">Contact Us</h2>
-    <p id="contactEmail">Email: name@gmail.com</p>
+    <p id="contactEmail">Email: gjd.help.in@gmail.com</p>
     <p id="contactPhone">Phone: +91-XXXXXXXXXX</p>
     <p id="contactAddress">Address: Hyderabad, Telangana, India</p>
 </section>
