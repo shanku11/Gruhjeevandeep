@@ -188,13 +188,18 @@ body {
 .hospital-card a:hover {
     text-decoration: underline;
 }
+.container {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1200px; /* Ensures it doesn’t become too wide on large screens */
+    margin: 0 auto; /* Centers the div */
+    padding: 20px;
+}
 .hospital-info {
     background-color: #f8f9fa;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 80%;
+    margin: 20px;
     text-align: center;
 }
 
@@ -211,7 +216,7 @@ body {
 
 .hospital-info h2 {
     color: #0d47a1;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .hospital-info h3 {
@@ -436,13 +441,4 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
-}
-/* Make sure the navbar is always fixed at the top */
-.navbar {
-    position: fixed; /* Keeps it fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full-width navbar */
-    z-index: 1000; /* Ensures it stays on top of other elements */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
 }
