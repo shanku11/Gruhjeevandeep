@@ -12,38 +12,6 @@ nav a {
 nav a:hover {
     background-color: #aee46b;
 }
-/* Fullscreen Video Styling */
-#video-container {
-    position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(10, 10, 10, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            flex-direction: column;
-        }
-        #intro-video {
-            width: 80%;
-            height: 80%;
-            object-fit: cover;
-        }
-        /* Close Button Styling */
-        #close-btn {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            font-size: 30px;
-            background: rgb(248, 186, 186);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
         #marquee-container {
             position: relative;
             width: 100%;
@@ -54,19 +22,6 @@ nav a:hover {
             padding: 10px 0;
             font-weight: bold;
             text-align: center;
-        }
-        /* Close Button Hover Effect */
-        #close-btn:hover {
-            background: rgb(10, 10, 10);
-        }
-        .volume-control{
-            margin-top: 10px;
-            width: 200px;
-        }
-        /* Home Page Styling */
-        #homepage {
-            text-align: center;
-            padding: 50px;
         }
         body {
             background-color: white;
