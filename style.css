@@ -19,7 +19,6 @@ nav a:hover {
             background: #000000;
             color: rgb(255, 0, 0);
             font-size: 18px;
-            padding: 10px 0;
             font-weight: bold;
             text-align: center;
         }
@@ -29,7 +28,6 @@ nav a:hover {
         }
         .hero-section {
             text-align: center;
-            padding: 50px;
             background: linear-gradient(135deg, #6f42c1, #e83e8c);
             color: white;
             border-radius: 10px;
