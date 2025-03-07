@@ -25,9 +25,9 @@
             }
         </style>
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#"> 
                 <img src="GJD_logo.png" alt="Logo" style="height: 30px;" onclick="location.reload();">
-                GRUHJEEVANDEEP - Education
+                GRUHJEEVANDEEP-Education
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
                         <a class="nav-link" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a>
                     </li>
                 </ul>
-            </div>
+            </div>          
         </div>
     </nav>
     <div id="google_translate_element"></div>
@@ -153,69 +153,16 @@
         <a href="#Exams"><h3>Competitive Exams</h3></a>
         <a href="#Organisations"><h3>Organizations</h3></a>
     </nav>
-        <div class="container" id="scholarship">
+    
+    <div class="container">
         <h1>Scholarships for Telangana Students</h1>
-        <br>
-            <div class="scholarships">
-                <div class="row">
-                
-                <div class="scholarship">
-                    <h2>National Means-cum-Merit Scholarship (NMMS)</h2>
-                    <p><strong>For:</strong> Class 8 students from economically weaker sections</p>
-                    <p><strong>Scholarship Amount:</strong> ₹12,000 per year (₹1,000 per month) till Class 12</p>
-                    <p><strong>Exam Pattern:</strong>Mental Ability Test (MAT) and Scholastic Aptitude Test (SAT)</p> 
-                    <p><strong>Eligibility:</strong>Family income should be less than ₹3.5 lakh per annum</p> 
-                    <p><strong>Official Website:</strong> <a href="https://bse.telangana.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
-                </div>
-                    <div class="scholarship">
-                        <h2>Telangana National Talent Search Examination (NTSE)</h2>
-                        <p><strong>For:</strong> Class 10 students</p>
-                        <p><strong>Scholarship Amount:</strong> ₹1,250 - ₹2,000 per month</p>
-                        <p><strong>Exam Pattern: </strong>MAT (Mental Ability Test) and SAT (Scholastic Aptitude Test)</p>
-                        <p><strong>Eligibility:</strong> Open to all Class 10 students studying in recognized schools</p>
-                        <p><strong>Application & Exam:</strong> Conducted in two stages – State Level (November) and National Level (May)</p>
-                        <p><strong>Official Website:</strong> <a href="https://ncert.nic.in/" target="_blank"><button type="button">Go to Website</button></a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="scholarship">
-                        <h2>Indian National Olympiad (INO)</h2>
-                        <p><strong>For:</strong> Class 9-12 students (Math, Science, Astronomy)</p>
-                        <p><strong>Scholarship: </strong>Selected students get training for international competitions and merit-based rewards</p>
-                        <p><strong>Application & Exam: </strong>Stage-wise selection from state to national level (October to February)</p>
-                        <p><strong>Official Website:</strong> <a href="https://olympiads.hbcse.tifr.res.in/" target="_blank"><button type="button">Go to Website</button></a></p>
-                    </div>
-                    <div class="scholarship">
-                        <h2>Kishore Vaigyanik Protsahan Yojana (KVPY)</h2>
-                        <p><strong>For:</strong> Science students in Class 11, 12, UG</p>
-                        <p><strong>Scholarship Amount:</strong> ₹5,000 - ₹7,000 per month</p>
-                        <p><strong>Exam Pattern:</strong>MCQ-based questions in Physics, Chemistry, Mathematics, and Biology</p>
-                        <p><strong>Eligibility:</strong> Science stream students with good academic performance</p>
-                        <p><strong>Application & Exam:</strong> Registration usually starts in July, exam in November</p>
-                        <p><strong>Official Website:</strong> <a href="https://www.iisc.ac.in/kvpy/" target="_blank"><button type="button">Go to Website</button></a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="scholarship">
-                        <h2>Inspire Scholarship (Innovation in Science Pursuit for Inspired Research)</h2>
-                        <p><strong>For:</strong> Top 1% performers in Class 12 Science stream</p>
-                        <p><strong>Scholarship: </strong>₹80,000 per year for higher education in science</p>
-                        <p><strong>Eligibility:</strong>  Students who score high in Class 12 board exams and pursue science</p>
-                        <p><strong>Application & Exam: </strong> Based on board results, no separate exam</p>
-                        <p><strong>Official Website:</strong> <a href="https://online-inspire.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
-                    </div>
-                    <div class="scholarship">
-                        <h2>Pragati & Saksham Scholarships (for Girls & Disabled Students)</h2>
-                        <p><strong>For:</strong> Students pursuing technical or engineering education</p>
-                        <p><strong>Scholarship Amount:</strong> ₹50,000 per year</p>
-                        <p><strong>Exam Pattern: </strong>MAT (Mental Ability Test) and SAT (Scholastic Aptitude Test)</p>
-                        <p><strong>Eligibility:</strong>  Girls (Pragati) or physically disabled students (Saksham) in AICTE-approved colleges</p>
-                        <p><strong>Application & Exam:</strong> Merit-based selection, no specific exam</p>
-                        <p><strong>Official Website: </strong> <a href="https://scholarships.gov.in/" target="_blank"><button type="button">Go to Website</button></a></p>
-                    </div>
-                </div>
-            </div>
-        </div><br>
+        <input type="text" id="searchBar" placeholder="Search for scholarships..." width="50%" height="10%">
+        <ul id="scholarshipList"></ul>
+    </div>
+    
+    <script src="edu_script.js"></script>
+    
+    <br>
         <div class="container" id="Exams">
             <h1>Competitive Exams</h1>
             
