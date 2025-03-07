@@ -12,12 +12,18 @@ nav a {
 nav a:hover {
     background-color: #aee46b;
 }
+        /* Home Page Styling */
+        #homepage {
+            text-align: center;
+            padding: 50px;
+        }
         body {
             background-color: white;
             font-family: 'Open Sans', sans-serif;
         }
         .hero-section {
             text-align: center;
+            padding: 50px;
             background: linear-gradient(135deg, #6f42c1, #e83e8c);
             color: white;
             border-radius: 10px;
@@ -30,11 +36,6 @@ nav a:hover {
         }
         .highlight-section2 {
             background-color: rgba(232, 142, 248, 0.5);
-        }
-        .btn-success {
-            margin: 10px;
-            background-color: #28a745;
-            border: none;
         }
         .quote {
             margin-top: 30px;
