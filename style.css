@@ -12,16 +12,6 @@ nav a {
 nav a:hover {
     background-color: #aee46b;
 }
-        #marquee-container {
-            position: relative;
-            width: 100%;
-            margin-top: 100vh; /* Push marquee below the video */
-            background: #000000;
-            color: rgb(255, 0, 0);
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-        }
         body {
             background-color: white;
             font-family: 'Open Sans', sans-serif;
