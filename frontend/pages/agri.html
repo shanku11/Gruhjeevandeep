@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Agriculture - GRUHJEEVANDEEP</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+    <link rel="stylesheet" href="css/global.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .org-card { border-left: 5px solid #27ae60; }
+        .scheme-card { border-left: 5px solid #f1c40f; }
+        .tech-card { border-left: 5px solid #e67e22; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-glass sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html"> 
+            <img src="images/GJD_logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+            GRUHJEEVANDEEP
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="index.html"><i class="fas fa-home text-primary"></i> Home</a></li>
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="Education.html"><i class="fas fa-book" style="color: #3498db;"></i> Education</a></li>
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="healthcare.html"><i class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a></li>
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="agri.html"><i class="fas fa-tractor" style="color: #2ecc71;"></i> Agriculture</a></li>
+                <li class="nav-item mx-2"><a class="nav-link text-dark" href="policies.html"><i class="fas fa-gavel" style="color: #f39c12;"></i> Policies</a></li>
+                <li class="nav-item dropdown ms-lg-3">
+                    <button class="btn btn-modern dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-language"></i> English
+                    </button>
+                    <ul class="dropdown-menu border-0 shadow-sm rounded-4">
+                        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
+                        <li><a class="dropdown-item" href="#" data-lang="te">Telugu</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-header shadow-sm">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Agriculture Hub</h1>
+        <p class="lead">Empowering Farmers with Organic Farming & Subsidies</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div id="agriCarousel" class="carousel slide shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="https://wallpapercave.com/wp/wp10648969.jpg" class="d-block w-100" alt="Agri 1"></div>
+            <div class="carousel-item"><img src="https://wallpapercave.com/wp/wp2916561.jpg" class="d-block w-100" alt="Agri 2"></div>
+            <div class="carousel-item"><img src="https://wallpapercave.com/wp/wp3708739.jpg" class="d-block w-100" alt="Agri 3"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#agriCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#agriCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+    </div>
+</div>
+
+<div class="container mb-5 text-center" id="agri-nav">
+    <a href="#organizations" class="btn btn-outline-success mx-2 rounded-pill">Organizations</a>
+    <a href="#schemes" class="btn btn-outline-warning mx-2 rounded-pill">Subsidies & Schemes</a>
+    <a href="#natural-farming" class="btn btn-outline-info mx-2 rounded-pill">Natural Farming</a>
+</div>
+
+<div class="container" id="organizations">
+    <h2 class="mb-4 fw-bold text-success"><i class="fas fa-seedling"></i> Organic Farming Organizations</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 org-card">
+                <h4>Telangana State Seed and Organic Certification Authority (TSSOCA)</h4>
+                <p class="text-muted">A statutory organization under the Agriculture & Cooperation Department.</p>
+                <a href="https://tssoca.telangana.gov.in" target="_blank" class="btn btn-sm btn-success">Visit Website</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 org-card">
+                <h4>Paramparagat Krishi Vikas Yojana (PKVY)</h4>
+                <p class="text-muted">Central scheme promoting organic farming through traditional practices.</p>
+                <a href="https://pgsindia-ncof.gov.in/" target="_blank" class="btn btn-sm btn-success">Visit Website</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 org-card">
+                <h4>Centre for Sustainable Agriculture</h4>
+                <a href="https://csa-india.org" target="_blank" class="btn btn-sm btn-outline-success mt-2">Visit</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 org-card">
+                <h4>Sahaja Aharam Producer Co.</h4>
+                <a href="https://www.sahajaaharam.in/" target="_blank" class="btn btn-sm btn-outline-success mt-2">Visit</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 org-card">
+                <h4>Ekalavya Foundation</h4>
+                <a href="https://ekalavya.net/agriculture/" target="_blank" class="btn btn-sm btn-outline-success mt-2">Visit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5" id="schemes">
+    <h2 class="mb-4 fw-bold text-warning"><i class="fas fa-hand-holding-usd"></i> Government Schemes and Subsidies</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 scheme-card">
+                <h4>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h4>
+                <p class="text-muted">Financial support for irrigation systems like drip and sprinkler.</p>
+                <a href="http://pmksy.gov.in/" target="_blank" class="btn btn-sm btn-warning">Apply Here</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="glass-card p-4 h-100 scheme-card">
+                <h4>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h4>
+                <p class="text-muted">Insurance coverage to farmers for crop loss due to calamities.</p>
+                <a href="https://pmfby.gov.in/" target="_blank" class="btn btn-sm btn-warning">Apply Here</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 scheme-card">
+                <h4>Micro Irrigation Fund (MIF)</h4>
+                <a href="https://www.nabard.org/" target="_blank" class="btn btn-sm btn-outline-warning mt-2">NABARD</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 scheme-card">
+                <h4>Sub-Mission on Agricultural Mechanization (SMAM)</h4>
+                <a href="http://www.agrimachinery.nic.in/" target="_blank" class="btn btn-sm btn-outline-warning mt-2">SMAM Website</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="glass-card p-4 h-100 scheme-card">
+                <h4>Weather-based Crop Insurance (WBCIS)</h4>
+                <a href="https://pmfby.gov.in/" target="_blank" class="btn btn-sm btn-outline-warning mt-2">PMFBY Website</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5" id="natural-farming">
+    <h2 class="mb-4 fw-bold text-info"><i class="fas fa-leaf"></i> Natural Farming Techniques (ZBNF)</h2>
+    <div class="glass-card p-4 mb-4">
+        <p class="lead">Zero Budget Natural Farming (ZBNF) emphasizes sustainable agriculture by minimizing external inputs.</p>
+        <div class="row g-3 mt-3">
+            <div class="col-md-3"><div class="p-3 border rounded bg-light text-center"><strong>Jeevamrutha</strong><br><small>Bio-fertilizer</small></div></div>
+            <div class="col-md-3"><div class="p-3 border rounded bg-light text-center"><strong>Bijamrita</strong><br><small>Seed treatment</small></div></div>
+            <div class="col-md-3"><div class="p-3 border rounded bg-light text-center"><strong>Mulching</strong><br><small>Soil moisture</small></div></div>
+            <div class="col-md-3"><div class="p-3 border rounded bg-light text-center"><strong>Inter-Cropping</strong><br><small>Enhance fertility</small></div></div>
+        </div>
+    </div>
+
+    <div class="glass-card p-4 border-success border-2 bg-success bg-opacity-10">
+        <h3 class="text-success"><i class="fas fa-recycle"></i> Waste Decomposer</h3>
+        <p>This single bottle decomposes bio-waste of more than 1 lakh metric tonnes just in 30 days!</p>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h5>Mass Multiplication</h5>
+                <ul>
+                    <li>Mix 2 kg of jaggery in 200 liters of water.</li>
+                    <li>Pour the bottle contents into the solution.</li>
+                    <li>Stir daily. Ready in 7 days.</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5>Composting</h5>
+                <ul>
+                    <li>Spread 1 tonne of waste material.</li>
+                    <li>Wet it with decomposer solution.</li>
+                    <li>Turn over compost every 7 days. Ready in 30-40 days.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4 bg-black text-white-50 mt-5">
+    <p class="mb-0">&copy; 2026 GRUH JEEVAN DEEP | Empowering Through Knowledge</p>
+</footer>
+
+<div id="google_translate_element" style="display: none;"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            if (typeof window.driver === 'undefined') return;
+            const driver = window.driver.js.driver;
+            const driverObj = driver({
+                showProgress: true, animate: true, padding: 10,
+                steps: [
+                    { element: '#agri-nav', popover: { title: 'Agri Links', description: 'Quick access to Organizations, Schemes, and Techniques.', side: "bottom" } },
+                    { element: '#schemes', popover: { title: 'Subsidies & Schemes', description: 'Financial support for farmers.', side: "top" } },
+                    { element: '#natural-farming', popover: { title: 'ZBNF', description: 'Learn about zero budget natural farming and waste decomposers.', side: "top" } }
+                ]
+            });
+            const tutorBtn = document.createElement('button');
+            tutorBtn.className = 'btn-tutor'; tutorBtn.innerHTML = '<i class="fas fa-question"></i>';
+            document.body.appendChild(tutorBtn);
+            tutorBtn.addEventListener('click', () => driverObj.drive());
+        }, 500);
+    });
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Healthcare - GRUHJEEVANDEEP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+    <link rel="stylesheet" href="css/global.css">
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hospital-card {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .hospital-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-glass sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/GJD_logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                GRUHJEEVANDEEP
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="index.html"><i
+                                class="fas fa-home text-primary"></i> Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="Education.html"><i class="fas fa-book"
+                                style="color: #3498db;"></i> Education</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="healthcare.html"><i
+                                class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="agri.html"><i class="fas fa-tractor"
+                                style="color: #2ecc71;"></i> Agriculture</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="policies.html"><i class="fas fa-gavel"
+                                style="color: #f39c12;"></i> Policies</a></li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <button class="btn btn-modern dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-language"></i> English
+                        </button>
+                        <ul class="dropdown-menu border-0 shadow-sm rounded-4">
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="te">Telugu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header shadow-sm">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Healthcare Directory</h1>
+            <p class="lead">Medical Management in Daily Life - Accessible for All</p>
+        </div>
+    </div>
+
+    <div class="container mb-5 text-center" id="health-nav">
+        <a href="#Arogyasri-hospitals-Telangana" class="btn btn-outline-danger mx-2 rounded-pill">Arogyasri
+            Hospitals</a>
+        <a href="#Ayushman-bharath" class="btn btn-outline-info mx-2 rounded-pill">Ayushman Bharat</a>
+        <a href="#Free-Services-hospitals" class="btn btn-outline-success mx-2 rounded-pill">Free Service Hospitals</a>
+    </div>
+
+    <div class="container mb-5" id="Arogyasri-hospitals-Telangana">
+        <div class="glass-card p-5 text-center">
+            <h2 class="mb-4 fw-bold text-danger"><i class="fas fa-hospital-alt"></i> Arogyasri Hospitals Telangana</h2>
+            <p class="text-muted mb-4">Select a district to view registered hospitals offering free treatments under
+                Arogyasri.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <select id="districtSelect" class="form-select form-select-lg mb-3 shadow-sm rounded-pill px-4">
+                        <option value="">All Districts</option>
+                        <option value="Adilabad">Adilabad</option>
+                        <option value="Bhadradri Kothagudem">Bhadradri Kothagudem</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Karimnagar">Karimnagar</option>
+                        <!-- other districts removed for brevity, will rely on JS -->
+                    </select>
+                </div>
+            </div>
+            <div id="hospital-list" class="row g-4 mt-3 text-start"></div>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="Ayushman-bharath">
+        <div class="glass-card p-5 text-center">
+            <h2 class="mb-4 fw-bold text-info"><i class="fas fa-heartbeat"></i> Ayushman Bharat Hospitals</h2>
+            <p class="text-muted mb-4">Select your state to download the Ayushman Card hospital list PDF.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <select id="state-select" class="form-select form-select-lg mb-3 shadow-sm rounded-pill px-4">
+                        <option value="">-- Select State --</option>
+                        <option value="andhraPradesh">Andhra Pradesh</option>
+                        <option value="telangana">Telangana</option>
+                        <option value="maharashtra">Maharashtra</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-4 p-3 bg-light rounded-3 text-start">
+                <p class="mb-0">
+                    <i class="fas fa-info-circle text-info"></i> To download the official Ayushman card hospital list,
+                    visit the official website <a target="_blank"
+                        href="https://hospitals.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsNew"
+                        class="fw-bold text-decoration-none">here</a>, fill the captcha and click on 'Search'.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5" id="Free-Services-hospitals">
+        <h2 class="mb-4 fw-bold text-success text-center"><i class="fas fa-user-md"></i> Free Services Hospitals in
+            Telangana</h2>
+        <div class="row g-4">
+            <!-- CMR Hospital -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100 hospital-card">
+                    <img src="https://i.ytimg.com/vi/KII2ldoP2xk/hqdefault.jpg" class="w-100 hospital-img">
+                    <h4>CMR Hospital</h4>
+                    <p class="text-muted small"><strong>Location:</strong> Hyderabad, Telangana</p>
+                    <p>Premier multi-specialty institution offering free medical services under various government
+                        schemes.</p>
+                    <a href="https://www.cmrhospital.com" target="_blank"
+                        class="btn btn-sm btn-outline-danger mt-2 rounded-pill px-4">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Gandhi Hospital -->
+            <div class="col-md-6">
+                <div class="glass-card p-4 h-100 hospital-card">
+                    <img src="https://www.gandhihospital.telangana.gov.in/resource/images/gh_logo.jpg"
+                        class="w-100 hospital-img" style="object-fit: contain; background: white;">
+                    <h4>Gandhi Hospital</h4>
+                    <p class="text-muted small"><strong>Location:</strong> Secunderabad, Telangana</p>
+                    <p>Leading government hospital specializing in trauma care, cardiology, and general medicine.</p>
+                    <a href="https://www.gandhihospital.com" target="_blank"
+                        class="btn btn-sm btn-outline-danger mt-2 rounded-pill px-4">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Osmania -->
+            <div class="col-md-4">
+                <div class="glass-card p-4 h-100 hospital-card">
+                    <img src="https://i.pinimg.com/736x/3c/4d/25/3c4d256d1f13ff3f4c0ac1652e274557.jpg"
+                        class="w-100 hospital-img">
+                    <h4>Osmania General Hospital</h4>
+                    <a href="https://www.osmaniahospital.com" target="_blank"
+                        class="btn btn-sm btn-outline-danger mt-2 rounded-pill px-4">Visit</a>
+                </div>
+            </div>
+
+            <!-- NIMS -->
+            <div class="col-md-4">
+                <div class="glass-card p-4 h-100 hospital-card">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.tBybR8A9k6HnWpFrFQEO3QHaCf&pid=Api&P=0&h=180"
+                        class="w-100 hospital-img">
+                    <h4>NIMS</h4>
+                    <a href="https://www.nims.edu.in" target="_blank"
+                        class="btn btn-sm btn-outline-danger mt-2 rounded-pill px-4">Visit</a>
+                </div>
+            </div>
+
+            <!-- Fever Hospital -->
+            <div class="col-md-4">
+                <div class="glass-card p-4 h-100 hospital-card">
+                    <img src="https://en-media.thebetterindia.com/uploads/2022/01/fever-hospital-nallakunta-hyderabad-hospitals-7ysf0-1641825158.jpg"
+                        class="w-100 hospital-img">
+                    <h4>Fever Hospital</h4>
+                    <a href="https://www.feverhospital.com" target="_blank"
+                        class="btn btn-sm btn-outline-danger mt-2 rounded-pill px-4">Visit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 bg-black text-white-50 mt-5">
+        <p class="mb-0">&copy; 2026 GRUH JEEVAN DEEP | Empowering Through Knowledge</p>
+    </footer>
+
+    <div id="google_translate_element" style="display: none;"></div>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load external hospital data script -->
+    <script src="js/script.js"></script>
+
+    <!-- Driver.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (typeof window.driver === 'undefined') return;
+                const driver = window.driver.js.driver;
+                const driverObj = driver({
+                    showProgress: true, animate: true, padding: 10,
+                    steps: [
+                        { element: '#health-nav', popover: { title: 'Healthcare Resources', description: 'Jump to specific hospital categories quickly.', side: "bottom" } },
+                        { element: '#Arogyasri-hospitals-Telangana', popover: { title: 'Arogyasri Network', description: 'Find registered hospitals by district for free care.', side: "top" } },
+                        { element: '#Free-Services-hospitals', popover: { title: 'Top Government Hospitals', description: 'Major hospitals offering 100% free services to the public.', side: "top" } }
+                    ]
+                });
+                const tutorBtn = document.createElement('button');
+                tutorBtn.className = 'btn-tutor'; tutorBtn.innerHTML = '<i class="fas fa-question"></i>';
+                document.body.appendChild(tutorBtn);
+                tutorBtn.addEventListener('click', () => driverObj.drive());
+            }, 500);
+        });
+
+        // Simple script to handle district selection drawing from hospitals JSON in script.js
+        const districtSelect = document.getElementById('districtSelect');
+        const hospitalList = document.getElementById('hospital-list');
+
+        if (districtSelect && typeof hospitals !== 'undefined') {
+            // Populate districts dynamically based on hospitals object
+            districtSelect.innerHTML = '<option value="">All Districts</option>';
+            Object.keys(hospitals).forEach(dist => {
+                districtSelect.innerHTML += `<option value="${dist}">${dist}</option>`;
+            });
+
+            districtSelect.addEventListener('change', (e) => {
+                hospitalList.innerHTML = '';
+                const district = e.target.value;
+                if (!district) return;
+
+                const list = hospitals[district];
+                if (list && list.length > 0) {
+                    list.forEach(h => {
+                        hospitalList.innerHTML += `
+                        <div class="col-md-6">
+                            <div class="p-3 border rounded-3 bg-white shadow-sm">
+                                <h5 class="text-danger">${h.name}</h5>
+                                <span class="badge bg-secondary mb-2">${h.type}</span>
+                                <p class="small mb-1"><strong>Mandal:</strong> ${h.mandal}</p>
+                                <p class="small mb-0 text-truncate" title="${h.specialities.join(', ')}"><strong>Specialties:</strong> ${h.specialities.join(', ')}</p>
+                            </div>
+                        </div>
+                    `;
+                    });
+                } else {
+                    hospitalList.innerHTML = '<p class="text-center w-100">No hospitals found for this district.</p>';
+                }
+            });
+        }
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

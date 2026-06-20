@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Policies - GRUHJEEVANDEEP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
+    <link rel="stylesheet" href="css/global.css">
+
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .scheme-card {
+            border-top: 5px solid #f39c12;
+        }
+
+        .scheme-img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+            width: calc(100% + 3rem);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-glass sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/GJD_logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                GRUHJEEVANDEEP
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="index.html"><i
+                                class="fas fa-home text-primary"></i> Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="Education.html"><i class="fas fa-book"
+                                style="color: #3498db;"></i> Education</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="healthcare.html"><i
+                                class="fas fa-stethoscope" style="color: #e74c3c;"></i> HealthCare</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="agri.html"><i class="fas fa-tractor"
+                                style="color: #2ecc71;"></i> Agriculture</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link text-dark" href="policies.html"><i class="fas fa-gavel"
+                                style="color: #f39c12;"></i> Policies</a></li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <button class="btn btn-modern dropdown-toggle" type="button" id="languageDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-language"></i> English
+                        </button>
+                        <ul class="dropdown-menu border-0 shadow-sm rounded-4">
+                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="hi">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#" data-lang="te">Telugu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header shadow-sm">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Government Policies & Schemes</h1>
+            <p class="lead">Explore various government schemes, their benefits, and how to apply for them.</p>
+        </div>
+    </div>
+
+    <!-- Web Search Tool -->
+    <div class="container mb-5" id="gov-websites">
+        <div class="glass-card p-5 text-center bg-warning bg-opacity-10 border-warning border-2">
+            <h2 class="mb-4 fw-bold text-warning"><i class="fas fa-search"></i> Telangana Govt Websites Directory</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group mb-3">
+                        <input type="text" id="search" class="form-control form-control-lg"
+                            placeholder="Search for a department (e.g. Agriculture)...">
+                        <button class="btn btn-warning text-white fw-bold px-4"
+                            onclick="searchWebsite()">Search</button>
+                    </div>
+                    <select id="websiteList" class="form-select form-select-lg mb-3 shadow-sm rounded-pill px-4"
+                        onchange="displayWebsite()">
+                        <option value="">-- Browse Websites --</option>
+                        <option value="https://rajivaarogyasri.telangana.gov.in">Rajiv Aarogyasri Health Care Trust
+                        </option>
+                        <option value="https://eagrimarket.telangana.gov.in">Agriculture and Co-operation Department,
+                            Telangana</option>
+                        <option value="https://ahddf.telangana.gov.in">Animal Husbandry, Dairy Development & Fisheries
+                        </option>
+                        <option value="https://www.aasara.telangana.gov.in">Asara Pensions</option>
+                        <option value="https://tsobmms.cgg.gov.in">Backward Classes Welfare</option>
+                        <option value="https://bathukamma.telangana.gov.in">Bathukamma</option>
+                        <option value="https://www.nrega.telangana.gov.in">Benefit Disbursement Portal</option>
+                        <option value="https://ubdmis.telangana.gov.in">Birth & Death Registration</option>
+                        <option value="https://tsbie.cgg.gov.in">Board of Intermediate Education Telangana</option>
+                        <option value="https://ccla.telangana.gov.in">Commissioner & Director of Land Administration
+                        </option>
+                        <option value="https://tourism.telangana.gov.in">Telangana Tourism Department</option>
+                    </select>
+                    <div id="displayArea" class="alert alert-info mt-3 d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5" id="schemes-list">
+        <div class="row g-5">
+
+            <!-- PMJDY -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.o97yJHkGUJzkQmAWWRGn7QHaD1?pid=Api&P=0&h=180
+                        class=" scheme-img">
+                    <h3 class="mb-3 text-dark">Pradhan Mantri Jan Dhan Yojana (PMJDY)</h3>
+                    <p><strong>Overview:</strong> Financial inclusion scheme for accessing banking, savings, credit, and
+                        pension.</p>
+                    <ul>
+                        <li>Zero minimum balance account.</li>
+                        <li>Overdraft facility after 6 months.</li>
+                    </ul>
+                    <a href="https://r.search.yahoo.com/_ylt=AwrKGkn1TDZqVwIAweK7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1783153142/RO=10/RU=https%3a%2f%2fpmjdy.gov.in/RK=2/RS=V9Nk26q5hS4HA4ZB.wpxTjx1dz8-"
+                        target="_blank" class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Atal Pension Yojana -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.r22XjnDvlrqgQZqQ8xJkWAHaEK?pid=Api&P=0&h=180"
+                        class="scheme-img">
+                    <h3 class="mb-3 text-dark">Atal Pension Yojana (APY)</h3>
+                    <p><strong>Overview:</strong> Pension scheme for the unorganized sector with guaranteed pension from
+                        age 60.</p>
+                    <ul>
+                        <li>Flexible monthly contributions.</li>
+                        <li>Tax benefits under Section 80CCD.</li>
+                    </ul>
+                    <a href="https://www.india.gov.in/spotlight/atal-pension-yojana" target="_blank"
+                        class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- CM Relief Fund -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://tnpds.org.in/wp-content/uploads/2023/04/How-to-apply-for-CM-Relief-Fund.jpg"
+                        class="scheme-img">
+                    <h3 class="mb-3 text-dark">CM Relief Fund</h3>
+                    <p><strong>Overview:</strong> Financial assistance for individuals in emergency situations (medical,
+                        disasters).</p>
+                    <ul>
+                        <li>Immediate support for major medical treatments.</li>
+                    </ul>
+                    <a href="https://tsobmms.cgg.gov.in/" target="_blank"
+                        class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Rythu Bandhu Scheme -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://launchpadeducation.in/wp-content/uploads/2023/11/blog-pictures-12.jpg"
+                        class="scheme-img">
+                    <h3 class="mb-3 text-dark">Rythu Bandhu Scheme</h3>
+                    <p><strong>Overview:</strong> Direct investment support for farmers in Telangana to purchase inputs.
+                    </p>
+                    <ul>
+                        <li>Ensures timely sowing and boosts productivity.</li>
+                    </ul>
+                    <a href="https://rythubandhu.telangana.gov.in/" target="_blank"
+                        class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- PM-KISAN Scheme -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://theunitedindian.com/images/pm-kisan.jpg" class="scheme-img">
+                    <h3 class="mb-3 text-dark">PM-KISAN Scheme</h3>
+                    <p><strong>Overview:</strong> ₹6,000 per year direct income assistance to farmers across India.</p>
+                    <a href="https://pmkisan.gov.in/" target="_blank"
+                        class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Pradhan Mantri Awas Yojana -->
+            <div class="col-lg-6">
+                <div class="glass-card p-4 h-100 scheme-card">
+                    <img src="https://www.raceias.com/public/storage/current_affairs/cZwOdrYnII2Kx93CYRBHRid5TECY7DD2lycVFp5C.jpg"
+                        class="scheme-img">
+                    <h3 class="mb-3 text-dark">Pradhan Mantri Awas Yojana</h3>
+                    <p><strong>Overview:</strong> Affordable housing for all, subsidized home loans for weaker sections.
+                    </p>
+                    <a href="https://pmaymis.gov.in/" target="_blank"
+                        class="btn btn-warning mt-2 rounded-pill px-4">Apply Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center py-4 bg-black text-white-50 mt-5">
+        <p class="mb-0">&copy; 2026 GRUH JEEVAN DEEP | Empowering Through Knowledge</p>
+    </footer>
+
+    <div id="google_translate_element" style="display: none;"></div>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+
+    <script>
+        function displayWebsite() {
+            let websiteList = document.getElementById("websiteList");
+            let displayArea = document.getElementById("displayArea");
+            let selectedValue = websiteList.value;
+
+            displayArea.classList.remove('d-none');
+            if (selectedValue) {
+                displayArea.innerHTML = `<a href="${selectedValue}" target="_blank" class="fw-bold fs-5 text-decoration-none">Go to ${websiteList.options[websiteList.selectedIndex].text} <i class="fas fa-external-link-alt"></i></a>`;
+            } else {
+                displayArea.innerHTML = "Website details will appear here...";
+            }
+        }
+
+        function searchWebsite() {
+            let searchInput = document.getElementById("search").value.toLowerCase();
+            let options = document.getElementById("websiteList").options;
+            let found = false;
+            let displayArea = document.getElementById("displayArea");
+
+            displayArea.classList.remove('d-none');
+            for (let i = 1; i < options.length; i++) {
+                let text = options[i].text.toLowerCase();
+                if (text.includes(searchInput)) {
+                    options[i].selected = true;
+                    displayArea.innerHTML = `<a href="${options[i].value}" target="_blank" class="fw-bold fs-5 text-decoration-none">Go to ${options[i].text} <i class="fas fa-external-link-alt"></i></a>`;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                displayArea.innerHTML = "<span class='text-danger'>No matching website found.</span>";
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Driver.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                if (typeof window.driver === 'undefined') return;
+                const driver = window.driver.js.driver;
+                const driverObj = driver({
+                    showProgress: true, animate: true, padding: 10,
+                    steps: [
+                        { element: '#gov-websites', popover: { title: 'Web Directory', description: 'Search and find official Telangana Govt websites quickly.', side: "bottom" } },
+                        { element: '#schemes-list', popover: { title: 'Major Schemes', description: 'Explore details and apply for major central and state schemes.', side: "top" } }
+                    ]
+                });
+                const tutorBtn = document.createElement('button');
+                tutorBtn.className = 'btn-tutor'; tutorBtn.innerHTML = '<i class="fas fa-question"></i>';
+                document.body.appendChild(tutorBtn);
+                tutorBtn.addEventListener('click', () => driverObj.drive());
+            }, 500);
+        });
+    </script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
